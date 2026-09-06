@@ -1,0 +1,3469 @@
+﻿version="2.00"
+[settings]
+	char set = "utf-8"
+	update one day
+;;; Если вы используете полное описание, то активируйте эту строку убрав ";"
+	threads count = 3
+
+
+; Чтение файла title_url_youtube.com.txt
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\title_url_youtube.com.txt"
+  [page] arr[data_youtube]
+	split = "\r\n"
+
+; Чтение файла title_seasonvar.ru.txt	
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\title_seasonvar.ru.txt"
+  [page] arr[data_seasonvar]
+	split = "\r\n"
+	
+; Чтение файла title_url_kinogo.online.txt
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\title_kinogo.online.txt"
+  [page] arr[data_kinogo]
+	split = "\r\n"	
+	
+	; Чтение файла title_myshow.txt
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\title_myshows.txt"
+  [page] arr[data_myshows]
+	split = "\r\n"	
+
+; Чтение файла search_channel_youtube.com.txt
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\search_channel_youtube.com.txt"
+  [page] arr[data_youtube_ch]
+	split = "\r\n"
+
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\title_mayday.txt"
+  [page] arr[data_mayday]
+	split = "\r\n"
+	
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\title_erokrad.txt"
+  [page] arr[data_erokrad]
+	split = "\r\n"
+
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\title_porno.txt"
+  [page] arr[data_porno]
+	split = "\r\n"	
+
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\channel_porno.txt"
+  [page] arr[data_porno_ch]
+	split = "\r\n"
+	
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\title_anu.tizam.org.txt"
+  [page] arr[data_tizam]
+	split = "\r\n"		
+
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\title_rutube.txt"
+  [page] arr[data_rutube]
+	split = "\r\n"	
+
+
+; Чтение файла title_url_uft.lol.txt
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\title_url_uft.lol.txt"
+  [page] arr[data_uft_lol]
+	split = "\r\n"
+	
+; Чтение файла title_rezka.ag.txt	
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\title_rezka.ag.txt"
+  [page] arr[data_rezka]
+	split = "\r\n"
+	
+
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\title_url_dokonlin.online.txt"
+  [page] arr[data_dokonlin]
+	split = "\r\n"
+	
+; Чтение файла title_url_dok-film.net.txt
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\title_url_dok-film.net.txt"
+  [page] arr[data_dok_film]
+	split = "\r\n"
+	
+; Чтение файла title_url_kino.mail.ru.txt
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\title_url_kino.mail.ru.txt"
+  [page] arr[data_kino_mail]
+	split = "\r\n"
+
+; Чтение файла serial_url_kino.mail.ru.txt
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\serial_url_kino.mail.ru.txt"
+  [page] arr[data_kino_mail_serial_url]
+	split = "\r\n"
+
+; Чтение файла channel_url_kino.mail.ru.txt
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\channel_url_kino.mail.ru.txt"
+  [page] arr[data_kino_mail_ch_url]
+	split = "\r\n"
+
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\title_kinopoisk.txt"
+  [page] arr[data_kino_kinopoisk]
+	split = "\r\n"
+	
+; Чтение файла replace_title.txt
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\replace_title.txt"
+  [page] arr[data_title_replace]
+	split = "\r\n"
+  [page] arr[title_replace]
+	cycle = Arr.Length[data_title_replace] / 2
+	var = Arr[data_title_replace, Idx.Var * 2]
+  [page] arr[title_replace_to]
+	cycle = Arr.Length[data_title_replace] / 2
+	var = Arr[data_title_replace, Idx.Var * 2 + 1]
+
+; Чтение файла replace_serial.txt
+[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\replace_serial.txt"
+  [page] arr[data_serial_replace]
+	split = "\r\n"
+  [page] arr[serial_replace]
+	cycle = Arr.Length[data_serial_replace] / 2
+	var = Arr[data_serial_replace, Idx.Var * 2]
+  [page] arr[serial_replace_to]
+	cycle = Arr.Length[data_serial_replace] / 2
+	var = Arr[data_serial_replace, Idx.Var * 2 + 1]
+	
+; Чтение файла title_gtorrent.txt	
+	
+	[url provider]
+	url = "file:\\\\" + Path.App + "\\_DreamFolder\\title_gtorrent.txt"
+  [page] arr[data_kino_gtorrent]
+	split = "\r\n"	
+	
+; Чтение файла xml_url.txt
+[url provider]
+	url = "file:\\\\" + Path.Provider + "\\xml_url.txt"
+  [page] var[xml_url]
+	trim spaces
+	
+[url provider] name[xml]
+	time out = 100
+	url = Var[xml_url]
+  [page] var[..]
+	var = ""
+
+;;; Полное описание с youtube.com каналы
+[url channel]
+  [page] var[id_youtube_ch]
+	var = Arr.Find[data_youtube_ch, Channel.Name]
+
+[url channel]
+  [page] var[id_porno_ch]
+	var = Arr.Find[data_porno_ch, Channel.Name]
+
+[url]
+	time out = 100
+	page = Page[xml]
+	
+	
+  [global]
+	!start = "channel=\"" + Channel.Number + "\""
+	
+  [container] all turn
+	start = "<programme"
+	!next if like = "channel=\"" + Channel.Number + "\""
+	break if like = " start=\"" + Date(AddDays(Now, 3), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -2), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -3), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -4), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -5), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -6), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -7), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -8), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -9), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -10), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -11), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -12), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -13), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -14), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -15), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -16), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -17), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -18), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -19), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -20), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -21), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -22), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -23), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -24), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -25), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -26), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -27), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -28), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -29), "yyyyMMdd")
+next if like = " start=\"" + Date(AddDays(Now, -30), "yyyyMMdd")
+
+
+
+  [container] var[title]
+	!begin = "<title lang="
+	!end = "</title>"
+	remove words() = Arr.New["logo_","«","»","М/ф","М/Ф","м/ф","X/ф","X/Ф","Х/Ф","х/ф","Т/с","Т/С","т/с","_temp"]
+	replace words() = Arr.New ["_","—","–"]
+	replace to() = Arr.New [" ","-","-"]
+	replace words() = Arr.New [">1984<",">2012<"]
+	replace to() = Arr.New [">1984 (1984)<",">2012 (2009)<"]
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+	trim letters = "."
+	trim letters = "<"
+	trim letters = "-"
+	trim letters = "\""
+	trim spaces
+	clear if like() = Arr.New ["Анонс", "реклама", "Реклама", "РЕКЛАМА", "START", "TND14", "TND32", "TND", "Телепрограмма Отсутствует"]
+	
+[container] var[title_main]
+	!begin = "<title lang="
+	!end = "</title>"
+  remove after = "/"
+;;remove from = "("
+;;remove to = ")"
+	remove words() = Arr.New["logo_","«","»","_temp"]
+	replace words() = Arr.New ["_","—","–"]
+	replace to() = Arr.New [" ","-","-"]
+	replace words() = Arr.New [">1984<",">2012<","Война миров Z(2013)"]
+	replace to() = Arr.New [">1984 (1984)<",">2012 (2009)<","Война миров Z (2013)"]
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+	trim letters = "."
+	trim letters = "<"
+	trim letters = "-"
+	trim letters = "\""
+	trim spaces
+	clear if like() = Arr.New ["Анонс", "реклама", "Реклама", "РЕКЛАМА", "START", "TND14", "TND32", "TND", "Телепрограмма Отсутствует"]
+	
+[container] var[title_seasonvar]
+	var = Var[title]
+    remove after = "/"
+    remove after = ","
+	replace words() = Arr.New ["Человек-паук -","Люди Икс -","Гуфи и его команда -","Драконы и всадники Олуха -","Туман (1980)"]
+	replace to() = Arr.New ["Человек-паук -£","Люди Икс -£","Гуфи и его команда£","Драконы и всадники Олуха£","Туман (2010)"]
+	remove after = "£"
+trim spaces	
+	
+
+
+  [container] var[time]
+	!begin = "start=\""
+	!end = "\""
+	remove after = "+"
+	remove xml tags
+	remove duplicate spaces
+	trim spaces
+  [time]
+	result = Date.Parse(Var[time], "yyyyMMddHHmmss")
+	includes date
+  [date current]
+	result = AddHours(Date.Current, - 2) 	
+
+  [container] var[tip_title]
+	var = Str(Channel.Number)
+;;; НИЖЕ.ПЕРЕЧИСЛЯЕШЬ.номера-каналов.на.которые.не.будет.искать.полное.описание.на.kinomail:
+	replace words() = Arr.New["BOX Mayday HD","BOX AutoTrend HD","BCU Russia 90s HD","BOX Travel Premiere HD","BOX Docu HD","BOX Game HD","BOX Gurman HD","BOX Kosmo 4K","BOX Memory HD","BOX Relax 4K","BOX Stories HD","BOX Travel HD"]
+	replace to = "*"
+
+  [container] var[chan]
+	var = Var[tip_title]
+	replace words() = Arr.New["Д/с","*"]
+	replace to = "1"
+	remove words() = Arr.New[Str(Channel.Number)]
+	remove duplicate spaces
+	trim spaces
+
+  [container] var[series_start]
+	var = Var[title]
+	remove after = "Карпов - 1 сезон"
+	remove after = "Призвание - 1 сезон"
+	trim spaces
+  [container] var[series_start]
+	var = Compare(Str(Var[title] = Var[series_start]), "", Var[series_start])
+
+  [container] var[title]
+	var = Var[title]
+	remove before = Var[series_start]
+	trim spaces
+
+
+  [container] var[series_finish_year]
+	var = Var[title]
+	remove before = ") "
+	trim spaces
+  [container] var[series_finish_year]
+	var = Compare(Str(Var[title] = Var[series_finish_year]), "", Var[series_finish_year])
+
+
+  [container] var[series_finish]
+	var = Var[title]
+	remove before = "Маша и Медведь-"
+	remove before = "Смешарики-"
+	remove before = "Котенок Мусти-"
+	remove before = "Трактаун-"
+	remove before = "Марин и его друзья-"
+	remove before = "Ми-ми-мишки-"
+	remove before = "ЧиЧиЛэнд-"
+	remove before = "Паровозик Тишка-"
+	remove before = "Царевны-"
+	remove before = "Олли-Веселый грузовичок-"
+	remove before = "Геройчики -"
+	remove before = "Губка Боб - "
+	remove before = "Приключения мишек Гамми"
+	remove before = "Чудеса на виражах -"
+	remove before = "DOTA -"
+	remove before = "Космические спасатели лейтенанта Марша"
+	remove before = "Трансформеры -"
+	remove before = "Драконы и всадники Олуха"
+	remove before = "Чип и Дейл -"
+	remove before = "Аллдин - "
+	remove before = "Аллдин -"
+	remove before = "Русалочка -"
+	remove before = "Мыши-рокеры с Марса -"
+	remove before = "Каспер, который живёт под крышей -"
+	remove before = "Гуфи и его команда"
+	remove before = "Человек-паук New -"
+	remove before = "Пинки и Брейн"
+	remove before = "Мыши-рокеры с Марса"
+	remove before = "Футурама -"
+	remove before = "Сестры - 1"
+	remove before = "ЧОП -"
+	remove before = "Перевал Дятлова -"
+	remove before = "И снова здравствуйте! -"
+	remove before = "Слово пацана. Кровь на асфальте"
+	remove before = "Триггер -"
+	remove before = "Чики -"
+	remove before = "Домашний арест -"
+	remove before = "Большая игра - 1"
+	remove before = "Аванпост - 1"
+	remove before = "Жуки -"
+	remove before = "Два - 1"
+	remove before = "Два - 2"
+	remove before = "Война семей -"
+	remove before = "Мерзлая земля -"
+	remove before = "Территория -"
+	remove before = "Юность -"
+	remove before = "Два холма -"
+	remove before = "Фишер -"
+	remove before = "Король и Шут -"
+	remove before = "Почка -"
+	remove before = "Библиотекарь -"
+	remove before = "Райский уголок -"
+	remove before = "Вне себя -"
+	remove before = "Первый раз -"
+	remove before = "Ворона -"
+	remove before = "Друзья - 10 сезон"
+	remove before = "Друзья - 1 сезон"
+	remove before = "Друзья - 2 сезон"
+	remove before = "Друзья - 3 сезон"
+	remove before = "Друзья - 4 сезон"
+	remove before = "Друзья - 5 сезон"
+	remove before = "Друзья - 6 сезон"
+	remove before = "Друзья - 7 сезон"
+	remove before = "Друзья - 8 сезон"
+	remove before = "Друзья - 9 сезон"
+	remove before = "Клиника -"
+	remove before = "Офис -"
+	remove before = "Сообщество - 1 сезон"
+	remove before = "Сообщество - 2 сезон"
+	remove before = "Сообщество - 3 сезон"
+	remove before = "Сообщество - 4 сезон"
+	remove before = "Сообщество - 5 сезон"
+	remove before = "Сообщество - 6 сезон"
+	remove before = "Как я встретил вашу маму"
+	remove before = "Южный парк -"
+	remove before = "Харли Квинн - 1 сезон"
+	remove before = "Харли Квинн - 2 сезон"
+	remove before = "Харли Квинн - 3 сезон"
+	remove before = "Харли Квинн - 4 сезон"
+	remove before = "Харли Квинн - 5 сезон"
+	remove before = "Вселенная Стивена - 1 сезон"
+	remove before = "Вселенная Стивена - 2 сезон"
+	remove before = "Вселенная Стивена - 3 сезон"
+	remove before = "Вселенная Стивена - 4 сезон"
+	remove before = "Вселенная Стивена - 5 сезон"
+	remove before = "Том и Джерри - 1 сезон"
+	remove before = "Том и Джерри - 2 сезон"
+	remove before = "Том и Джерри - 3 сезон"
+	remove before = "Том и Джерри - 4 сезон"
+	remove before = "Том и Джерри - 5 сезон"
+	remove before = "Крайний космос - 1 сезон"
+	remove before = "Крайний космос - 2 сезон"
+	remove before = "Крайний космос - 3 сезон"
+	remove before = "Обратная сторона Земли - 1 сезон"
+	remove before = "Обратная сторона Земли - 2 сезон"
+	remove before = "Обратная сторона Земли - 3 сезон"
+	remove before = "Обратная сторона Земли - 4 сезон"
+	remove before = "Обратная сторона Земли - 5 сезон"
+	remove before = "Любовь. Смерть. Роботы - 1 сезон"
+	remove before = "Любовь. Смерть. Роботы - 2 сезон"
+	remove before = "Любовь. Смерть. Роботы - 3 сезон"
+	remove before = "Любовь. Смерть. Роботы - 4 сезон"
+	remove before = "Конь БоДжек - 1 сезон"
+	remove before = "Конь БоДжек - 2 сезон"
+	remove before = "Конь БоДжек - 3 сезон"
+	remove before = "Конь БоДжек - 4 сезон"
+	remove before = "Конь БоДжек - 5 сезон"
+	remove before = "Конь БоДжек - 6 сезон"
+	remove before = "Я есть Грут - 1 сезон"
+	remove before = "Я есть Грут - 2 сезон"
+	remove before = "Гравити Фолз - 1 сезон"
+	remove before = "Гравити Фолз - 2 сезон"
+	remove before = "По ту сторону изгороди - 1 сезон"
+	remove before = "С приветом по планетам - 1 сезон"
+	remove before = "С приветом по планетам - 2 сезон"
+	remove before = "Корпорация Заговор - 1 сезон"
+	remove before = "Корпорация Заговор - 2 сезон"
+	remove before = "Амфибия - 1 сезон"
+	remove before = "Амфибия - 2 сезон"
+	remove before = "Амфибия - 3 сезон"
+	remove before = "Я это уже видел - 1 сезон"
+	remove before = "Бэймакс - 1 сезон"
+	remove before = "Крот-"
+	remove before = "Нулевой пациент -"
+	remove before = "Отпуск -"
+	remove before = "Остров -"
+	remove before = "Ольга -"
+	remove before = "Контакт -"
+	remove before = "Везёт -"
+	remove before = "Отдельное общество"
+	remove before = "Тиран -"
+	remove before = "Противостояние -"
+	remove before = "Затмение -"
+	remove before = "Первый день счастливой жизни"
+	remove before = "Лейла -"
+	remove before = "Рыбка золотая -"
+	remove before = "Зорро - 1"
+	remove before = "Джоан -"
+	remove before = "Дорогуша -"
+	remove before = "Ходячие мертвецы - Дэрил Диксон"
+	remove before = "Пингвин -"
+	remove before = "Гений -"
+	remove before = "Каратель - 1"
+	remove before = "Основано на реальных событиях -"
+	remove before = "Праздники -"
+	remove before = "Лихие -"
+	remove before = "Молот ведьм -"
+	remove before = "Селенкай"
+	remove before = "Дылды -"
+	remove before = "Зона комфорта -"
+	remove before = "Беспринципные -"
+	remove before = "Игра на выживание -"
+	remove before = "Комбинация -"
+	remove before = "Игры -"
+	remove before = "Телохранители - 1"
+	remove before = "Телохранители - 2"
+	remove before = "Сансара -"
+	remove before = "Идеальная семья -"
+	remove before = "Два с половиной человека -"
+	remove before = "Теория Большого взрыва - 10 сезон"
+	remove before = "Теория Большого взрыва - 11 сезон"
+	remove before = "Теория Большого взрыва - 12 сезон"
+	remove before = "Теория Большого взрыва - 1 сезон"
+	remove before = "Теория Большого взрыва - 2 сезон"
+	remove before = "Теория Большого взрыва - 3 сезон"
+	remove before = "Теория Большого взрыва - 4 сезон"
+	remove before = "Теория Большого взрыва - 5 сезон"
+	remove before = "Теория Большого взрыва - 6 сезон"
+	remove before = "Теория Большого взрыва - 7 сезон"
+	remove before = "Теория Большого взрыва - 8 сезон"
+	remove before = "Теория Большого взрыва - 9 сезон"
+	remove before = "Ублюдские хроники"
+	remove before = "Землевладелец -"
+	remove before = "На вызове -"
+	remove before = "Цитадель - Хани Банни"
+	remove before = "Смертельно горячий"
+	remove before = "Мотель Калифорния"
+	remove before = "Робокар Поли и его друзья"
+	remove before = "Бригада -"
+	remove before = "Барбоскины -"
+	remove before = "Грузовичок Лёва"
+	remove before = "Буренка Даша"
+	remove before = "Малышарики -"
+	remove before = "Синий трактор -"
+	remove before = "Супер крылья -"
+	remove before = "Чаггингтон"
+	remove before = "Буба -"
+	remove before = "Томас и его друзья-"
+	remove before = "Вспыш и Чудо-"
+	remove before = "Монсики"
+	remove before = "Роботы-поезда -"
+	remove before = "Белка и Стрелка. Озорная семейка"
+	remove before = "Деревяшки"
+	remove before = "Оранжевая корова"
+	remove before = "Приключения Ам Няма"
+	remove before = "Приключения Тайо -"
+	remove before = "Городские герои-"
+	remove before = "Ресторан по понятиям -"
+	remove before = "Граф Монте-Кристо - 1"
+	remove before = "Мафия - 1"
+	remove before = "Скучаю по тебе - 1"
+	remove before = "Долг жизни - 1"
+	remove before = "Карпов - 1 сезон"
+	remove before = "Карпов - 2 сезон"
+	remove before = "Карпов - 3 сезон"
+	remove before = "Призвание - 1 сезон"
+	remove before = "В поисках ангела"
+	remove before = "Взрыв - 1"
+	remove before = "Емеля - 1"
+	remove before = "Вертинский - 1"
+	remove before = "Безумие - 1 сезон"
+	remove before = "По направлению к нулю - 1 сезон"
+	remove before = "Бродяга - 1 сезон"
+	remove before = "Охотник за головами - 1 сезон"
+	remove before = "Остров Утё"
+	remove before = "Рынок - 1"
+	remove before = "Игра в кальмара - 1 сезон"
+	remove before = "Игра в кальмара - 2 сезон"
+	remove before = "Игра в кальмара - 3 сезон"
+	remove before = "Студия Marvel. Легенды - 1 сезон"
+	remove before = "Люблю тебя до смерти"
+	remove before = "Необъяснимое - 5"
+	remove before = "Необъяснимое - 6"
+	remove before = "Хватай не глядя"
+	remove before = "Между молотом и наковальней"
+	remove before = "Звёзды ломбарда"
+	remove before = "Бандитский Петербург - Адвокат"
+	remove before = "Герои старшей школы"
+	remove before = "Чернобыль. Зона отчуждения - 1 сезон"
+	remove before = "Чернобыль. Зона отчуждения - 2 сезон"
+	remove before = "Эпидемия - 1 сезон"
+	remove before = "Эпидемия - 2 сезон"
+	remove before = "Полярный - 1 сезон"
+	remove before = "Полярный - 2 сезон"
+	remove before = "Полярный - 3 сезон"
+	remove before = "Полярный - 4 сезон"
+	remove before = "Полицейский с Рублевки - 1 сезон"
+	remove before = "Полицейский с Рублевки - 2 сезон"
+	remove before = "Полицейский с Рублевки - 3 сезон"
+	remove before = "Полицейский с Рублевки - 4 сезон"
+	remove before = "Папик - 1 сезон"
+	remove before = "Папик - 2 сезон"
+	remove before = "Девушки с Макаровым - 1 сезон"
+	remove before = "Девушки с Макаровым - 2 сезон"
+	remove before = "Девушки с Макаровым - 3 сезон"
+	remove before = "Девушки с Макаровым - 4 сезон"
+	remove before = "Девушки с Макаровым - 5 сезон"
+	remove before = "Закон каменных джунглей - 1 сезон"
+	remove before = "Закон каменных джунглей - 2 сезон"
+	remove before = "Зверобой - 1 сезон"
+	remove before = "Зверобой - 2 сезон"
+	remove before = "Зверобой - 3 сезон"
+	remove before = "Инспектор Гаврилов - 1 сезон"
+	remove before = "Инспектор Гаврилов - 2 сезон"
+	remove before = "Сваты 1 сезон"
+	remove before = "Сваты 2 сезон"
+	remove before = "Сваты 3 сезон"
+	remove before = "Сваты 4 сезон"
+	remove before = "Сваты 5 сезон"
+	remove before = "Сваты 6 сезон"
+	remove before = "Сваты 7 сезон"
+	remove before = "Сваты - 1 сезон"
+	remove before = "Сваты - 2 сезон"
+	remove before = "Сваты - 3 сезон"
+	remove before = "Сваты - 4 сезон"
+	remove before = "Сваты - 5 сезон"
+	remove before = "Сваты - 6 сезон"
+	remove before = "Сваты - 7 сезон"
+	remove before = "Утиные истории - 1 сезон"
+	remove before = "Утиные истории - 2 сезон"
+	remove before = "Утиные истории - 3 сезон"
+	remove before = "Утиные истории -"
+	remove before = "Аркейн - 1 сезон"
+	remove before = "Аркейн - 2 сезон"
+	remove before = "Отмена - 1 сезон"
+	remove before = "Отмена - 2 сезон"
+	remove before = "Дом Совы - 1 сезон"
+	remove before = "Дом Совы - 2 сезон"
+	remove before = "Дом Совы - 3 сезон"
+	remove before = "Рик и Морти - 1 сезон"
+	remove before = "Рик и Морти - 2 сезон"
+	remove before = "Рик и Морти - 3 сезон"
+	remove before = "Рик и Морти - 4 сезон"
+	remove before = "Рик и Морти - 5 сезон"
+	remove before = "Рик и Морти - 6 сезон"
+	remove before = "Рик и Морти - 7 сезон"
+	remove before = "Рик и Морти - 8 сезон"
+	remove before = "Тьма - 1 сезон"
+	remove before = "Тьма - 2 сезон"
+	remove before = "Тьма - 3 сезон"
+	remove before = "Тёмные начала - 1 сезон"
+	remove before = "Тёмные начала - 2 сезон"
+	remove before = "Тёмные начала - 3 сезон"
+	remove before = "Чёрное зеркало - 1 сезон"
+	remove before = "Чёрное зеркало - 2 сезон"
+	remove before = "Чёрное зеркало - 3 сезон"
+	remove before = "Чёрное зеркало - 4 сезон"
+	remove before = "Чёрное зеркало - 5 сезон"
+	remove before = "Чёрное зеркало - 6 сезон"
+	remove before = "Чёрное зеркало - 7 сезон"
+	remove before = "Пространство - 1 сезон"
+	remove before = "Пространство - 2 сезон"
+	remove before = "Пространство - 3 сезон"
+	remove before = "Пространство - 4 сезон"
+	remove before = "Пространство - 5 сезон"
+	remove before = "Пространство - 6 сезон"
+	remove before = "Побег - 1 сезон"
+	remove before = "Побег - 2 сезон"
+	remove before = "Побег - 3 сезон"
+	remove before = "Побег - 4 сезон"
+	remove before = "Побег - 5 сезон"
+	remove before = "Уэнсдэй - 1 сезон"
+	remove before = "Уэнсдэй - 2 сезон"
+	remove before = "Сотня - 1 сезон"
+	remove before = "Сотня - 2 сезон"
+	remove before = "Сотня - 3 сезон"
+	remove before = "Сотня - 4 сезон"
+	remove before = "Сотня - 5 сезон"
+	remove before = "Сотня - 6 сезон"
+	remove before = "Сотня - 7 сезон"
+	remove before = "Одни из нас - 1 сезон"
+	remove before = "Одни из нас - 2 сезон"
+	remove before = "Сквозь снег - 1 сезон"
+	remove before = "Сквозь снег - 2 сезон"
+	remove before = "Сквозь снег - 3 сезон"
+	remove before = "Сквозь снег - 4 сезон"
+	remove before = "Мир Дикого Запада - 1 сезон"
+	remove before = "Мир Дикого Запада - 2 сезон"
+	remove before = "Мир Дикого Запада - 3 сезон"
+	remove before = "Мир Дикого Запада - 4 сезон"
+	remove before = "Детство Шелдона - 1 сезон"
+	remove before = "Детство Шелдона - 2 сезон"
+	remove before = "Детство Шелдона - 3 сезон"
+	remove before = "Детство Шелдона - 4 сезон"
+	remove before = "Детство Шелдона - 5 сезон"
+	remove before = "Детство Шелдона - 6 сезон"
+	remove before = "Детство Шелдона - 7 сезон"
+	remove before = "Завучи - 1 сезон"
+	remove before = "Завучи - 2 сезон"
+	remove before = "Парки и зоны отдыха - 1 сезон"
+	remove before = "Парки и зоны отдыха - 2 сезон"
+	remove before = "Парки и зоны отдыха - 3 сезон"
+	remove before = "Парки и зоны отдыха - 4 сезон"
+	remove before = "Парки и зоны отдыха - 5 сезон"
+	remove before = "Парки и зоны отдыха - 6 сезон"
+	remove before = "Парки и зоны отдыха - 7 сезон"
+	remove before = "Тед Лассо - 1 сезон"
+	remove before = "Тед Лассо - 2 сезон"
+	remove before = "Тед Лассо - 3 сезон"
+	remove before = "Тед Лассо - 4 сезон"
+	remove before = "Бруклин 9-9 - 1 сезон"
+	remove before = "Бруклин 9-9 - 2 сезон"
+	remove before = "Бруклин 9-9 - 3 сезон"
+	remove before = "Бруклин 9-9 - 4 сезон"
+	remove before = "Бруклин 9-9 - 5 сезон"
+	remove before = "Бруклин 9-9 - 6 сезон"
+	remove before = "Бруклин 9-9 - 7 сезон"
+	remove before = "Бруклин 9-9 - 8 сезон"
+	remove before = "Два с половиной человека - 10 сезон"
+	remove before = "Два с половиной человека - 11 сезон"
+	remove before = "Два с половиной человека - 12 сезон"
+	remove before = "Два с половиной человека - 1 сезон"
+	remove before = "Два с половиной человека - 2 сезон"
+	remove before = "Два с половиной человека - 3 сезон"
+	remove before = "Два с половиной человека - 4 сезон"
+	remove before = "Два с половиной человека - 5 сезон"
+	remove before = "Два с половиной человека - 6 сезон"
+	remove before = "Два с половиной человека - 7 сезон"
+	remove before = "Два с половиной человека - 8 сезон"
+	remove before = "Два с половиной человека - 9 сезон"
+	remove before = "Три кота-"
+	remove before = "Фиксики-"
+	remove before = "Эволюция Черепашек‑ниндзя -"
+	remove before = "Черная пантера -"
+	remove before = "Драконы и всадники Олуха"
+	remove before = "Чужие деньги - 1 сезон"
+	remove before = "Отмороженные - 1 сезон"
+	remove before = "Космические спасатели лейтенанта Марша"
+	
+	trim spaces
+  [container] var[series_finish]
+	var = Compare(Str(Var[title] = Var[series_finish]), "", Var[series_finish])
+
+  [container] var[title]
+	var = Var[title]
+	remove after = Var[series_finish]
+	remove after = Var[series_finish_year]
+    trim spaces
+   
+
+  [title]
+	result = Var[title_main]
+		
+  [container] var[year1]
+	!begin = "<title lang="
+	!begin = "("
+	!end = ")"
+	remove letters
+	trim spaces
+	
+  [container] var[year]
+	var = Compare(Num(Str.Length(Var[year1]) = 4), Var[year1], "")
+
+;;; В СЕКЦИИ НИЖЕ- ты редактируешь титл так. как надо для поиска на веб-странице киномэйла::
+  [container] var[title_2]
+	var = Var[title] 
+;	remove words = Str(Series)
+	
+	replace words() = Arr.New ["Сезон","Серия"]
+	replace to() = Arr.New ["сезон","серия"]
+	
+	remove words() = Arr.New[ "М/ф ","м/ф ","X/ф ","х/ф ","Т/с ","т/с ","[Гоблин]",".","10-я серия","11-я серия","12-я серия","13-я серия","14-я серия","15-я серия","16-я серия","17-я серия","18-я серия","19-я серия","20-я серия","21-я серия","22-я серия","23-я серия","24-я серия","25-я серия","26-я серия","27-я серия","28-я серия","29-я серия","30-я серия","31-я серия","32-я серия","33-я серия","34-я серия","35-я серия","36-я серия","37-я серия","38-я серия","39-я серия","40-я серия","41-я серия","42-я серия","43-я серия","44-я серия","45-я серия","46-я серия","47-я серия","48-я серия","49-я серия","50-я серия","51-я серия","52-я серия","53-я серия","54-я серия","55-я серия","56-я серия","57-я серия","58-я серия","59-я серия","60-я серия","1-я серия","2-я серия","3-я серия","4-я серия","5-я серия","6-я серия","7-я серия","8-я серия","9-я серия",  "10 серия","11 серия","12 серия","13 серия","14 серия","15 серия","16 серия","17 серия","18 серия","19 серия","20 серия","21 серия","22 серия","23 серия","24 серия","25 серия","26 серия","27 серия","28 серия","29 серия","30 серия","31 серия","32 серия","33 серия","34 серия","35 серия","36 серия","37 серия","38 серия","39 серия","40 серия","41 серия","42 серия","43 серия","44 серия","45 серия","46 серия","47 серия","48 серия","49 серия","50 серия","51 серия","52 серия","53 серия","54 серия","55 серия","56 серия","57 серия","58 серия","59 серия","60 серия","1 серия","2 серия","3 серия","4 серия","5 серия","6 серия","7 серия","8 серия","9 серия","1 сезон","2 сезон","3 сезон","4 сезон","5 сезон","6 сезон","7 сезон","8 сезон","9 сезон","10 сезон","11 сезон","12 сезон","13 сезон","14 сезон","15 сезон","16 сезон","17 сезон","18 сезон","19 сезон","20 сезон","DVDRip-AVC","007 - ","Цветная версия","«","»","BDRip1080p"," HDR"]
+	
+	replace words() = Arr.New[ "1'0","2'0","3'0","4'0","_","‑","Чёрн","чёрн","Обезьянки *"]
+	replace to() = Arr.New[ "1.0","2.0","3.0","4.0"," ","-","Черн","черн","Обезьянки"]
+	
+	remove words() = Arr.New[ "'"," 3A "]
+	remove after = "0 0"
+	remove after = "BDRip"
+
+;;; НИЖЕ.ВПИСЫВАЕШЬ.ТИТЛЫ.НА.ЗАМЕНУ--НО.в.цикле.замены."replace words()"-НЕ.ПИШИ(УБИРАЙ).ТОЧКИ.иЗ.НАЗВАНИЯ--Т.К.-ВЫШЕ.В.КОДЕ.ТЫ.УЖЕ.УДАЛИЛ.ТОЧКИ.ИЗ.ИМЕН::::
+;;; И.ПОХОЖАЯ.ОШИБКА.С.СИМВОЛОМ "—" ОН.ВЫШЕ.В.КОДЕ.УЖЕ.ЗАМЕНЕН.НА.символ "-" ПОЭТОМУ.НЕ.ПИШИ.ТИТЛЫ.ДЛЯ.ЗАМЕНЫ.с.ЭТИМ.СИМВОЛОМ-Т.К. ОН.УЖЕ.ЗАМЕНЕН.НА.ДРУГОЙ..И.ТД,
+;;; Я.ПОПРАВИЛ.ГДЕ.ТАК.БЫЛО-ДАЛЬШЕ.САМ.СМОТРИ.ПОВНИМАТЕЛЬНЕЙ.КОД==НЕ.ЗАБЫВАЙ.ЧТО.ПОРЯДОК.КОМАНД.ВАЖЕН-ПЕРВОЙ.ВЫПОЛНИТСЯ.СТРОЧКА.ТА.ЧТО.ВЫШЕ!! ;;; ЕСЛИ.ВЫШЕ.УЖЕ.БЫЛА.ЗАМЕНА(УДАЛЕНИЕ).СИМВОЛА.НА.ДРУГОЙ.ТО.НИЖЕ.НАДО.ЭТО.УЧИТЫВАТЬ-И.ЭТОТ.УДАЛЕННЫЙ(ЗАМЕНЕННЫЙ)СИМВОЛ.НЕ.УКАЗЫВАТЬ-!! 
+;;; ЕСЛИ.ВПИСЫВАЕШЬ.НОВЫЕ.НАЗВАНИЯ(СИМВОЛЫ)ДЛЯ.ЗАМЕНЫ-ТО.ПИШИ.ИХ.В.КОНЦЕ.СЕКЦИИ.-ПОСЛЕ.ПРЕДЫДУЩИХ.ЗАМЕН!!
+;;; ВЫШЕ ПРОПИСАНА замена символов "Чёрн" на "Черн" - учитывай это когда в новых заменах будет попадаться такое- пиши "черный" без буквы "ё"
+;;; Файл title_replace.txt
+	replace words() = Arr[title_replace]
+	replace to() = Arr[title_replace_to]
+
+  [container] var[serial_title_2]
+	var = Var[title_2]
+	remove after = " -"
+	remove after = "-"
+	remove after = "- "
+	remove after = "("
+	remove after = "*"
+	remove after = "-Cезон"
+	remove after = "-Сезон"
+	remove after = "Серия"
+	remove duplicate spaces
+	trim spaces
+	trim letters = ","
+	trim letters = "-"
+	trim spaces
+
+  [container] var[serial_mail]
+;;; НИЖЕ.ПЕРЕЧИСЛЕНЫ.номера-каналов.на.которые.будет.искать.полное.описание.только.в.разделе.СЕРИАЛЫ.на.kinomail--я вписал только канал "c-cartoon-yosso"- другие.чисто.под.сериалы.не.годятся:
+	var = Compare(Str(Channel.Number = "BCU Multserial HD"), Var[serial_title_2] + "&ent=20",Compare(Str(Channel.Number = "BCU RuSerial HD"), Var[serial_title_2] + "&ent=20",Compare(Str(Channel.Number = "BOX M.Serial HD"), Var[serial_title_2] + "&ent=20",Compare(Str(Channel.Number = "BOX M.Serial HD"), Var[serial_title_2] + "&ent=20",Compare(Str(Channel.Number = "BOX Sitcom HD"), Var[serial_title_2] + "&ent=20",Compare(Str(Channel.Number = "BOX Serial 4K"), Var[serial_title_2] + "&ent=20",Compare(Str(Channel.Number = "BOX Serial HD"), Var[serial_title_2] + "&ent=20",Compare(Str(Channel.Number = "BOX Serial Premiere 4K"), Var[serial_title_2] + "&ent=20", Var[title_2]))))))))
+	replace words() = Arr[serial_replace]
+	replace to() = Arr[serial_replace_to]
+;;    remove after = "- ,"
+
+[container] var[title_porno]
+var = Var[title_2]
+remove after = " -"
+	remove after = "- "
+	remove after = "("
+	remove after = "*"
+	remove after = "-Cезон"
+	remove after = "-сезон"
+	remove after = "Серия"
+    remove after = "Ep"
+    remove after = "19"
+    remove after = "20"
+remove after = "EP"
+remove after = "18+"
+remove after = "CD"
+remove after = "DVD"
+
+	remove duplicate spaces
+	trim spaces
+	trim letters = ","
+	trim letters = "-"
+	trim spaces
+	
+[container] var[title_erokrad]
+    var = Var[title_main]
+    replace words() = Arr.New["_","  "]
+    replace to() = Arr.New[" "," "]
+    remove after = "18+"
+	remove words() = Arr.New["Ep1","Ep2","Ep3"]
+    remove duplicate spaces
+    trim spaces		
+	
+[container] var[title_rutube]
+	var = Var[title]
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces 	
+	
+
+;  [fd cache]
+;   result = Compare(Str(Var[chan] = "1"), "", Compare(Str(Title = ""), "", Title)) + Var[title_2] + Var[year]
+
+;##################################
+;;; rezka.ag
+;;; ссылка для rezka.ag ;;; https://rezka.ag/films/comedy/85424-dva-k-odnomu-2024.html ;;;
+  [container] var[id]
+	var = Arr.Find[data_rezka, Var[title]]
+  [container] var[url_rezka]
+	var = Compare(Num(Var[id] = -1), "", Arr[data_rezka, Var[id] + 1])
+
+  [fd web] 
+	time out = 100
+	wait = 0.5
+    "Cookie" = "techaro.lol-anubis-auth=eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhY3Rpb24iOiJDSEFMTEVOR0UiLCJjaGFsbGVuZ2UiOiIwMWEwNjgyMC04OTc0LTc5NzktODBkOC1mMDlmYTRmZGM5N2EiLCJleHAiOjE3OTEwNDUzNTgsImlhdCI6MTc4ODQ1MzM1OCwibWV0aG9kIjoiZmFzdCIsIm5iZiI6MTc4ODQ1MzI5OCwicG9saWN5UnVsZSI6ImFjOTgwZjQ5YzRkMzVmYWIiLCJyZXN0cmljdGlvbiI6IjhmZTFkMjZhMWVmNWU2Y2EyMmU5ZWQ0NTVlOGQ1ZDFhZjkxMTExZjRjMmQ2YmY3ZjdjOTQzN2NiZDVhNzUwMDQifQ.GKwnZxuNwz62j1mNhb59I8TmNAAjJphz2wBSJlmHaPtLaMEl8L1YKsXgIfBz5lXMSxFKB9J_ThFmMHtwTz8kDA;_vc_day=2026-09-03;_vc_id=DE-wKhcyD6zE4cwU7r4z3W8Yy5Vybs3k;techaro.lol-anubis-cookie-verification=01a06820-8974-7979-80d8-f09fa4fdc97a"
+    next if = Var[url_rezka]
+	url = Var[url_rezka]
+	
+  [black list]
+	host = "getter.fun"
+	host = "franecki.net"
+	host = "vk.com"
+	host = "clarity.ms"
+	host = "cdn.jsdelivr.net"
+	host = "ad2the.net"
+	host = "mc.yandex.ru"
+	host = "mc.webvisor.org"
+	host = "rezka.ag"
+	host = "www.clarity.ms"
+	host = "franeski.net"
+	
+  [fd global]
+	start = "<div class=\"b-content__columns pdt clearfix\""
+	finish = "Плеер также доступен"
+
+  [fd page] var[fd_image]
+	!begin = "<img itemprop=\"image\" src=\""
+	!end = "\""
+    trim spaces	
+
+  [fd image url] 
+    file name = Title + Series
+	url = Var[fd_image]
+
+  [fd page] var[fd_desc]
+   !begin = "<div class=\"b-post__description_text\">"
+   !end = "</div>"
+    remove xml tags
+	decode html
+    remove duplicate spaces
+	trim spaces
+    insert before = "► "
+    insert after = "\n"
+	insert after = "---------------"
+    insert after = "\n"
+	
+  [fd page] var[fd_genre]
+	!begin = "<span itemprop=\"genre\">"
+	!end = "</td>"
+	remove xml tags
+	decode html
+	insert before = "Жанр ▪ "
+	
+  [fd page] var[fd_age1]
+	!begin = "<h2>Возраст</h2>"
+	!begin = "\">"
+	!end = "<"
+	remove xml tags
+	decode html	
+	insert before = " ▪ ["
+    insert after = "]"
+  [fd page] var[fd_age2]
+	!begin = "<h2>Возраст</h2>"
+	!begin = "</span>"
+	!end = "</td>"
+	remove xml tags
+	decode html
+    trim spaces
+    insert before = " "
+  [fd page] var[fd_age]
+    var = Var[fd_age1] + Var[fd_age2]
+
+  [fd page] var[fd_country]
+    !begin = "<h2>Страна</h2>"
+	!end = "</a></td>"
+	remove xml tags
+	decode html
+	remove words = ":"
+	insert before = "Страна ▪ "
+	insert after = " ► " 
+	
+  [fd page] var[fd_year1]
+    !begin = "<h2>Дата выхода</h2>"
+	!begin = "<td>"
+    !end = "</a>"
+    remove xml tags
+	decode html 
+	[fd page] var[fd_year2]
+    !begin = ">Год:<"
+	!begin = "\">"
+    !end = "</a>"
+    remove xml tags
+	decode html 	
+  [fd page] var[fd_year]
+    var = Var[fd_year1] + Var[fd_year2]
+	insert before = "Премьера ▪ "
+	insert after = " ► "
+  
+   [fd page] var[fd_IMDb]
+    !begin = "<h2>Рейтинги</h2>"
+	!begin = ">IMDb</a>:"
+    !end = "</span>"
+    remove xml tags
+	decode html
+	clear if like = "Неизвестно"
+    clear if like = "0.0"
+	insert before = "Рейтинг: IMDb ["
+	insert after = "] "
+  [fd page] var[fd_kinopoisk]
+    !begin = "<h2>Рейтинги</h2>"
+	!begin = ">Кинопоиск</a>:"
+	!end = "</span>"
+	remove xml tags
+	decode html
+	clear if like = "Неизвестно"
+	clear if like = "0.0"
+	insert before = "Кинопоиск: ["
+	insert after = "] "
+   [fd page] var[fd_rating]
+    var = Var[fd_IMDb] + Var[fd_kinopoisk]
+    insert after = "\n"
+
+  [fd page] var[fd_duration]
+    !begin = "itemprop=\"duration\">"
+    !end = "</td>"
+    remove xml tags
+	decode html
+	trim spaces
+    insert before = " ▪ "
+
+   [fd page] arr[fd_directors]
+	!begin = "<h2>Режиссер</h2>"
+	!begin = "itemprop=\"name\">"
+	!end = "</div>"
+	remove xml tags
+	decode html
+	trim spaces
+    insert before ="Режия ► "
+    insert after = ".\n"
+
+  [fd page] var[fd_actor] 
+    !begin = "<h2>В ролях актеры</h2>"
+	!begin = "itemprop=\"name\">"
+	!end = "</div>"
+	remove xml tags
+	decode html
+	trim spaces
+    insert before = "В Ролях ► "
+    insert after = ".\n"
+
+  [fd page] var[fd_orig]
+    !begin = "itemprop=\"alternativeHeadline\">"
+    !end = "</div>"
+    remove xml tags
+	decode html
+	trim spaces
+    insert before ="Оригинал ▪ "
+    insert after = ".\n"
+
+  [fd page] var[fd_slogan]
+    !begin = "<h2>Слоган</h2>"
+	!begin = "<td>"
+    !end = "</td>"
+    remove xml tags
+	decode html
+	trim spaces
+    insert before ="Слоган ▪ "
+    insert after = ".\n"
+
+  [fd page] var[fd_alias]
+    !begin = "<h2>Из серии</h2>"
+	!begin = "<td>"
+    !end = "</td>"
+    remove xml tags
+	decode html
+	trim spaces
+    insert before ="Из серии ▪ "
+    insert after = ".\n"	
+
+  [fd page] var[fd_cap]
+	var = Var[fd_genre] + Var[fd_age]
+    insert after = "\n"
+
+  [fd page] var[fd_cap1]
+    var = Var[fd_country] + Var[fd_year] + Var[fd_rating] + Var[fd_duration]
+	insert after = "\n"
+	insert after = "---------------"
+    insert after = "\n"
+	
+   [fd page] var[fd_cap2]
+    var = Var[fd_directors] + Var[fd_actor] + Var[fd_orig] + Var[fd_slogan] + Var[fd_alias]
+    	
+  [fd]
+      result = Var[fd_cap] + Var[fd_cap1] + Var[fd_desc] + Var[fd_cap2]
+
+
+;##########################################
+;;; seasonvar.ru
+;;; ссылка для seasonvar.ru ;;; https://seasonvar.ru/serial-17601-L_vinoe_korolevstvo_psmghqr.html ;;;
+  [container] var[id]
+	var = Arr.Find[data_seasonvar, Var[title_seasonvar]]
+  [container] var[url_seasonvar]
+	var = Compare(Num(Var[id] = -1), "", Arr[data_seasonvar, Var[id] + 1])
+
+  [fd url] cookie[cook]
+	time out = 100
+	wait = 0.5
+	next if = Var[url_seasonvar]
+	url = Var[url_seasonvar]
+
+  [fd global]
+	start = "<div class=\"wrapper\">"
+	finish = "<div class=\"pgs-seaslist\">"
+	
+  [fd page] var[fd_image]
+	!begin = "<div class=\"pgs-sinfo-imgwrap\">"
+	!begin = "src=\""
+	!end = "\" alt="
+    trim spaces
+    insert before = "https:"
+	trim spaces
+
+  [fd image url] 
+    file name = Title + Series
+	url = Var[fd_image]
+
+  [fd page] var[fd_desc]
+   !begin = "<div class=\"pgs-sinfo-info\">"
+   !begin = "<p>"
+   !end = "</p>"
+    remove xml tags
+	decode html
+    remove duplicate spaces
+	trim spaces
+    insert before = "► "
+    insert after = "\n"
+	insert after = "---------------"
+    insert after = "\n"	
+
+  [fd page] var[fd_genre]
+	!begin = "Жанр:"
+	!end = "<br>"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+	insert before = "Жанр ▪ "
+	
+  [fd page] var[fd_country]
+    !begin = "<br>Страна: <span>"
+	!end = "</span>"
+	remove xml tags
+	decode html
+	insert before = "Страна ▪ "
+	insert after = " ► " 
+	
+  [fd page] var[fd_year]
+    !begin = "> Вышел: <span>"
+    !end = "</span>"
+    remove xml tags
+	decode html
+	insert before = "Год ▪ "
+	insert after = " ► "
+  
+  [fd page] var[fd_IMDb]
+    !begin = ">IMDB: <span>"
+    !end = "</span>"
+    remove xml tags
+	decode html
+    clear if like = "0.0"
+	insert before = "Рейтинг: IMDb ["
+	insert after = "] "
+	
+  [fd page] var[fd_kinopoisk]
+    !begin = ">КиноПоиск: <span>"
+	!end = "</span>"
+	remove xml tags
+	decode html
+	clear if like = "0.0"
+	insert before = "Кинопоиск: ["
+	insert after = "] "
+    
+  [fd page] var[fd_rating]
+    var = Var[fd_IMDb] + Var[fd_kinopoisk]
+
+  [fd page] arr[fd_directors]
+	!begin ="<div>Режиссер:"
+	!end = "</div>"
+	remove xml tags
+	decode html
+	trim spaces
+    insert before ="Режиссер ► "
+    insert after = ".\n"
+
+  [fd page] var[fd_actor] 
+    !begin = "<span class=\"pgs-sinfo-actor-title\">В ролях</span>"
+	!end = "</a></div>"
+	replace words = "</a>"
+	replace to = ", "
+	remove xml tags
+	decode html
+    remove duplicate spaces
+	trim spaces
+    insert before = "В Ролях ► "
+    insert after = ".\n"
+	insert after = "---------------"
+    insert after = "\n"	
+	
+  [fd page] var[fd_orig]
+   !begin = "Оригинал: <span>"
+   !end = "</span>"
+    remove xml tags
+	decode html
+	trim spaces
+    insert before ="Оригинал ▪ "
+    insert after = ".\n"
+	
+  [fd page] var[fd_age]
+    !begin = "Ограничение:"
+   !end = "</span>"
+    remove xml tags
+	decode html
+	trim spaces
+    insert before = "  ["
+    insert after = "]"	
+	
+  [fd page] var[fd_cap]
+	 var = Var[fd_genre] + Var[fd_age]
+	 insert after = ".\n"
+  [fd page] var[fd_cap1]
+	 var = Var[fd_country] + Var[fd_year] + Var[fd_rating]
+     insert after = "\n"
+	 insert after = "---------------"
+     insert after = "\n"		 
+  [fd page] var[fd_cap2]
+     var = Var[fd_directors] + Var[fd_actor] + Var[fd_orig] 
+    	
+  [fd]
+     result = Var[fd_cap] + Var[fd_cap1]+ Var[fd_desc] + Var[fd_cap2]
+
+
+;#############################################
+;;; dokonlin.online
+;;; ссылка для dokonlin.online ;;; https://www.dokonlin.online/video/rubrics/lvinoe-korolevstvo.html ;;; https://www.dokonlin.online/video/tainy-guansiiskih-pescher-mystery-cave-o.html
+  [container] var[id]
+	var = Arr.Find[data_dokonlin, Var[title_2]]
+  [container] var[url_dokonlin]
+	var = Compare(Num(Var[id] = -1), "", Arr[data_dokonlin, Var[id] + 1])
+
+  [fd url] cookie[cook]
+	time out = 100
+	wait = 0.5
+	next if = Var[url_dokonlin]
+	url = Var[url_dokonlin]
+
+  [fd global]
+	start = "<div class=\"component\">"
+	finish = "<div id=\"right_column\">"
+	next if like = "<p class=\"not_found\">"
+  [fd page] var[fd_image1]
+	!begin = "<link rel=\"image_src\" href=\""
+	!end = "\""
+	trim spaces
+  [fd page] var[fd_image_rubr]
+	!begin = "<div class=\"rubric_img\">"
+	!begin = "src=\""
+	!end = "\""
+	trim spaces
+
+  [fd page] var[fd_image]
+	var = Compare(Str(Var[fd_image1] = ""), Var[fd_image_rubr],Var[fd_image1])
+  [fd image url] cookie[cook]
+	file name = Title + Series
+	url = Var[fd_image]
+  [fd page] var[fd_title]
+	!begin = "<div class=\"component\""
+	!begin = "<h1 class"
+	!end = "</h1>"
+	remove xml tags
+	decode html
+	trim spaces
+  [fd page] var[fd_genre1]
+	!begin = ">Категория ролика:"
+	!end = "</p>"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+  [fd page] var[fd_genre_rubr]
+	!begin = "class=\"folder\">"
+	!end = "</"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+
+ [fd page] var[fd_genre]
+	var = Compare(Str(Var[fd_genre1] = ""), Var[fd_genre_rubr],Var[fd_genre1])
+	insert before = "["
+	insert after = "]"
+ [fd page] var[fd_desc1]
+	!begin = "<div class=\"action-panel-content\""
+	!begin = "<div class=\"photo_descr\">"
+	!end = "</div>"
+	remove xml tags
+	decode html
+	remove words() = Arr.New["\n \n","\n\n","\n"," \n","\r","\r\n"]
+	remove duplicate spaces
+	trim spaces
+ [fd page] var[fd_desc_rubr]
+	!begin = "<div class=\"rubric_descr\">"
+	!end = "</div>"
+	replace words() = Arr.New [ "><br/>"]
+	replace to() = Arr.New [ "><br/> | "]
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+	remove words() = Arr.New["\n \n","\n\n","\n"," \n","\r","\r\n"]
+	replace words() = Arr.New [ "| |"]
+	replace to() = Arr.New [ "|"]
+	replace words() = Arr.New [ "||"]
+	replace to() = Arr.New [ "|"]
+	trim letters = "|"
+	remove duplicate spaces
+	trim spaces
+
+ [fd page] var[fd_desc]
+	var = Var[fd_genre] + " " + Compare(Str(Var[fd_desc1] = ""), Var[fd_desc_rubr],Var[fd_desc1])
+	trim spaces
+ [fd]
+	result = Var[fd_desc]
+	
+	
+;##############################################	
+;;; ссылка для youtube.com ;;; 
+  [container] var[id]
+	var = Arr.Find[data_youtube, Var[title]]
+  [container] var[url_youtube]
+	var = Compare(Num(Var[id] = -1), "", Arr[data_youtube, Var[id] + 1])
+
+  [fd url]
+    time out = 100    
+   "Cookie" = "VISITOR_PRIVACY_METADATA=CgJHQhIEGgAgLA%3D%3D;__Secure-3PSID=g.a000Bgm_U0VH1AKNy7iK94-5wOEehfPoRY9cDuDM4UJ6HIke5dVppAasJt_rcXPSQ2TRDLpzRgACgYKAbUSARQSFQHGX2MiaVIGYE2iwgLELBYhmDO1jBoVAUF8yKqBqFJ5btBHJJvdh14gDEFv0076;__Secure-1PSIDTS=sidts-CjQBXMw41Qr_98WxdJICRYF52Lm_fMt-CyRN_rZalrUaIn-0L6NTVSU9XWfxcB9Fz3cxa46lEAA;SAPISID=WUP6s37NYhdHYdcG/AxT4BrTqvyGsDSd0p;__Secure-1PSIDCC=AKEyXzXf3RM7GltpqiNrcssWhYWNbGQcK_2I0Q7ys1csp7wauP-z_SycpVE3ua7Yq81BKaMCfQ;SSID=AUd_Hzj37_lQgjDZ-;__Secure-1PAPISID=WUP6s37NYhdHYdcG/AxT4BrTqvyGsDSd0p;__Secure-1PSID=g.a000Bgm_U0VH1AKNy7iK94-5wOEehfPoRY9cDuDM4UJ6HIke5dVpCqQcXKX60Moqd5UCgBD9_QACgYKAVISARQSFQHGX2MiRIO3ivtg_sMJb1JHDK1LtxoVAUF8yKrp217JcIQMKzngZ2jzrzFC0076;__Secure-3PAPISID=WUP6s37NYhdHYdcG/AxT4BrTqvyGsDSd0p;__Secure-3PSIDCC=AKEyXzXGVWk478TJc8VUZNPWBQ7fQQxgxiYZ08RN6O2tQtJoMdBPmGHnH04YZi2EScddu-EZUw;__Secure-3PSIDTS=sidts-CjQBXMw41Qr_98WxdJICRYF52Lm_fMt-CyRN_rZalrUaIn-0L6NTVSU9XWfxcB9Fz3cxa46lEAA;__Secure-YNID=21.YT=pxi7-aGNH-WV4r9c8tdi5DinqwyFdhLLS3jkP6Mt1oIO6-83WJy54W9YRLFo85XuIXKHr_ue6NqA8kJE6zEKBlrxIx8IdGThHe3mxYbEnq1BklYv0v-bTNOF3LUAAdZWZC7KFcL5d_brdyL0UtntqJypVFoD44_lYEn5bMYYpaiXfIzbHNzvW6wkogwIZu7iZB_gSPcEh_hEFNBqAmDipBTNNTxan0-52EoIBQJpCNgbfZcb5SRatEaDid7b8M6cD7tL7-DG8Kh98EjCLjOQK3q9ps4cFaYhRZuLc7EJwOWRj7R4JvJImuoWZJQsrtBWWCexaB5X2YF1CQEzI_XaRQ;LOGIN_INFO=AFmmF2swRQIhAJ_tSD5gnuLzWNsQJ36hMN6uoxg5erMGLJs7rUihxHQ3AiB4nAFp6OXcSiVyk5Yg2A2j8Gtv_me47njvc76wLVxrQA:QUQ3MjNmelhwNVZxTXJWWkdVQmtSUjBLcDE1TU5FT2h4c0dTb1NQM1lrZ1lsVUVJUUF0elYxcklCMThnenJDc1Nwb291VFV4WjRTR0ZJTTZxMGhNT19BQmRIQld3LW9PenRoalo1alM5cVFtLUlodXIxeVkzQzQ3Wm1OR3lScmZJMTduV1lSUFMtdXNQM0xRbmVucU5OdHdLTFpXb0twVUZR;NID=534=BRTU3gGS0LnIoyrcZ2euobhyLaoCOqb1Wl9Z5lyGJ6lAqe8ciuL5FfxI6L1sfPFBGolshmUti1oUPcATNpW-Na5-1KU8SeV1Al1lwWjMHNXeSEklr1RZiLS2y6sHEqhB_Ve_yQy7SNzFCbm_qIJMOns8VUE6sLPparN_hYvKu7f4TeoV8W-syg86y1PE_NHBDDd-DpCK9sg;PREF=tz=Europe.London&f5=20000&f7=100&f6=400;SOCS=CAISEwgDEgk4NDI5NzAwODgaAmx2IAEaBgiA2fLJBg;VISITOR_INFO1_LIVE=2yD4L4deJKw"
+	"User-Agent" = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+	next if = Compare(Str(Var[url_youtube] = ""), Compare(Num(Var[id_youtube_ch] = -1), "", "true"), "")
+	url = "https://www.youtube.com/results?search_query=" + Var[title]
+
+  [fd global]
+    start = "\"commandMetadata\":{\"webCommandMetadata\":{\"url\":\"/watch?v="
+    finish = "\\"
+
+  [fd page] var[url_youtube]
+	!begin = "\"commandMetadata\":{\"webCommandMetadata\":{\"url\":\"/watch?v="
+    !end = "\\"
+
+  [fd url]
+    time out = 100
+    "Cookie" = "VISITOR_PRIVACY_METADATA=CgJHQhIEGgAgLA%3D%3D;__Secure-3PSID=g.a000Bgm_U0VH1AKNy7iK94-5wOEehfPoRY9cDuDM4UJ6HIke5dVppAasJt_rcXPSQ2TRDLpzRgACgYKAbUSARQSFQHGX2MiaVIGYE2iwgLELBYhmDO1jBoVAUF8yKqBqFJ5btBHJJvdh14gDEFv0076;__Secure-1PSIDTS=sidts-CjQBXMw41Qr_98WxdJICRYF52Lm_fMt-CyRN_rZalrUaIn-0L6NTVSU9XWfxcB9Fz3cxa46lEAA;SAPISID=WUP6s37NYhdHYdcG/AxT4BrTqvyGsDSd0p;__Secure-1PSIDCC=AKEyXzXf3RM7GltpqiNrcssWhYWNbGQcK_2I0Q7ys1csp7wauP-z_SycpVE3ua7Yq81BKaMCfQ;SSID=AUd_Hzj37_lQgjDZ-;__Secure-1PAPISID=WUP6s37NYhdHYdcG/AxT4BrTqvyGsDSd0p;__Secure-1PSID=g.a000Bgm_U0VH1AKNy7iK94-5wOEehfPoRY9cDuDM4UJ6HIke5dVpCqQcXKX60Moqd5UCgBD9_QACgYKAVISARQSFQHGX2MiRIO3ivtg_sMJb1JHDK1LtxoVAUF8yKrp217JcIQMKzngZ2jzrzFC0076;__Secure-3PAPISID=WUP6s37NYhdHYdcG/AxT4BrTqvyGsDSd0p;__Secure-3PSIDCC=AKEyXzXGVWk478TJc8VUZNPWBQ7fQQxgxiYZ08RN6O2tQtJoMdBPmGHnH04YZi2EScddu-EZUw;__Secure-3PSIDTS=sidts-CjQBXMw41Qr_98WxdJICRYF52Lm_fMt-CyRN_rZalrUaIn-0L6NTVSU9XWfxcB9Fz3cxa46lEAA;__Secure-YNID=21.YT=pxi7-aGNH-WV4r9c8tdi5DinqwyFdhLLS3jkP6Mt1oIO6-83WJy54W9YRLFo85XuIXKHr_ue6NqA8kJE6zEKBlrxIx8IdGThHe3mxYbEnq1BklYv0v-bTNOF3LUAAdZWZC7KFcL5d_brdyL0UtntqJypVFoD44_lYEn5bMYYpaiXfIzbHNzvW6wkogwIZu7iZB_gSPcEh_hEFNBqAmDipBTNNTxan0-52EoIBQJpCNgbfZcb5SRatEaDid7b8M6cD7tL7-DG8Kh98EjCLjOQK3q9ps4cFaYhRZuLc7EJwOWRj7R4JvJImuoWZJQsrtBWWCexaB5X2YF1CQEzI_XaRQ;LOGIN_INFO=AFmmF2swRQIhAJ_tSD5gnuLzWNsQJ36hMN6uoxg5erMGLJs7rUihxHQ3AiB4nAFp6OXcSiVyk5Yg2A2j8Gtv_me47njvc76wLVxrQA:QUQ3MjNmelhwNVZxTXJWWkdVQmtSUjBLcDE1TU5FT2h4c0dTb1NQM1lrZ1lsVUVJUUF0elYxcklCMThnenJDc1Nwb291VFV4WjRTR0ZJTTZxMGhNT19BQmRIQld3LW9PenRoalo1alM5cVFtLUlodXIxeVkzQzQ3Wm1OR3lScmZJMTduV1lSUFMtdXNQM0xRbmVucU5OdHdLTFpXb0twVUZR;NID=534=BRTU3gGS0LnIoyrcZ2euobhyLaoCOqb1Wl9Z5lyGJ6lAqe8ciuL5FfxI6L1sfPFBGolshmUti1oUPcATNpW-Na5-1KU8SeV1Al1lwWjMHNXeSEklr1RZiLS2y6sHEqhB_Ve_yQy7SNzFCbm_qIJMOns8VUE6sLPparN_hYvKu7f4TeoV8W-syg86y1PE_NHBDDd-DpCK9sg;PREF=tz=Europe.London&f5=20000&f7=100&f6=400;SOCS=CAISEwgDEgk4NDI5NzAwODgaAmx2IAEaBgiA2fLJBg;VISITOR_INFO1_LIVE=2yD4L4deJKw"
+	"User-Agent" = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+	next if = Compare(Str(Var[url_youtube]<>""),"true","")
+	url = "https://www.youtube.com/watch?v=" + Var[url_youtube]""
+
+  [fd global]
+    start = "<meta name=\"title\" content=\""
+    finish = "\"isCrawlable\""
+
+  [fd page] var[fd_titles]
+	!begin = "<meta name=\"title\" content=\""
+	!end = "\""     
+	decode html
+    decode escape
+	remove xml tags
+    decode unicode
+	remove duplicate spaces
+    trim spaces
+    insert after = "\n"
+  [fd page] var[fd_desc]
+	!begin = "\"shortDescription\":\""
+	!end = "\","     
+	decode html
+    decode escape
+	remove xml tags
+    decode unicode
+	remove duplicate spaces
+    trim spaces
+
+ [fd]
+	result =  Compare(Str(Var[fd_desc]= ""),Var[fd_titles],Var[fd_desc])
+
+  [fd page] var[fd_image]
+	!begin = "\"isCrawlable\":true,\"thumbnail\":{\"thumbnails\":[{\"url\":\""
+	!end = "?"
+
+  [fd image url] cookie[cook]
+	file name = Title + Series
+	url =  Var[fd_image]
+	
+	
+;############################################	
+;;; kinogo.online
+;;; ссылка для kinogo.online ;;; https://kinogo.online/filmy/111573-frankenshteyn.html ;;;
+  [container] var[id]
+	var = Arr.Find[data_kinogo, Var[title]]
+  [container] var[url_kinogo]
+	var = Compare(Num(Var[id] = -1), "", Arr[data_kinogo, Var[id] + 1])
+
+  [fd web] 
+	time out = 100
+	wait = 0.5
+    "Cookie" = "dle_user_id=35617; dle_password=c4e5c5ff195174af93404addc035edd4; dle_newpm=0; cf_clearance=wBbzjnl5xuuuKasvOC03DNb1a_i3noBUmBxX1ZuaHJA-1768157154-1.2.1.1-dSLkIA0LqT0IVBlneZB96VvY0L.X4pe9wQVdYFzXIBOd3Wuh__cIdXIkecNvvF3xkzOREhGBU3dstDIGHK7nCxhqPb8_XpmxmVrtUgrVEFhBgAt4obLMwiFXjgxCM4IXsUeyTLs9vdLV0ERW_806BY3tAMzU627Lhb5QMNOPqlbcSUiHWs41viLAC34wf_eJNM04YuI.fgxxJPGBgTv_ohmhdm_J_OZyOOdA9JQttL9oZ1ySnn.hpv9nvVkkncn0; PHPSESSID=0acf1c963387d80fa10d4741639b2b15"
+    next if = Var[url_kinogo]
+	url = Var[url_kinogo]
+
+  [black list]
+	host = "kodir2.github.io"
+	host = "cdnjs.cloudflare.com"
+	host = "static.cloudflareinsights.com"
+    host = "assistant.allarknow.online"
+    host = "ashdi.vip"
+    host = "p.lumex.space"
+    host = "63005.svetacdn.in"
+    host = "d6dd387e.obrut.show"
+    host = "region1.google-analytics.com"	
+
+  [fd global]
+	start = "<div id=\"content\">"
+	finish = "<ul class=\"js-player-tabs player-tabs\">"
+	
+  [fd page] var[fd_image]
+	!begin = "<div class=\"sPoster\">"
+	!begin = "src=\""
+	!end = "\""
+    trim spaces
+	insert before = "https://kinogo.online"
+	replace words = "webp"
+	replace to = "jpg"
+    trim spaces	
+
+  [fd image url] 
+    file name = Title + Series
+	url = Var[fd_image]
+
+  [fd page] var[fd_desc]
+   !begin = "<div class=\"filmDescription\">"
+   !begin = "<p>"
+   !end = "</p>"
+    remove xml tags
+	decode html
+    remove duplicate spaces
+	trim spaces
+    insert before = "► "
+    insert after = "\n"
+	insert after = "---------------"
+    insert after = "\n"	
+
+  [fd page] var[fd_genre]
+	!begin = "<b>Жанр:</b>"
+	!end = "</a></span>"
+	remove xml tags
+	decode html
+	replace words = " / "
+	replace to = ", "
+	insert before = "Жанр ▪ "
+	insert after = ".\n"
+	
+  [fd page] var[fd_country]
+    !begin = "<span><b>Страна:</b>"
+	!end = "</a></span>"
+	remove xml tags
+	decode html
+	insert before = "Страна ▪ "
+	insert after = " ► " 
+	
+  [fd page] var[fd_year]
+    !begin = "<span><b>Год выпуска:</b>"
+    !end = "</a></span>"
+    remove xml tags
+	decode html
+	insert before = "Год ▪ "
+	insert after = " ► "
+  
+  [fd page] var[fd_IMDb]
+    !begin = "<b>IMDB:</b>"
+    !end = "</div>"
+    remove xml tags
+	decode html
+	clear if like = "Неизвестно"
+    clear if like = "0.0"
+	insert before = "Рейтинг: IMDb ["
+	insert after = "] "
+    
+  [fd page] var[fd_kinopoisk]
+    !begin = "<b>КиноПоиск:</b>"
+	!end = "</div>"
+	remove xml tags
+	decode html
+	clear if like = "Неизвестно"
+	clear if like = "0.0"
+	insert before = "Кинопоиск: ["
+	insert after = "] "
+    
+  [fd page] var[fd_rating]
+    var = Var[fd_IMDb] + Var[fd_kinopoisk]
+    insert after = "\n"	
+
+  [fd page] arr[fd_directors]
+	!begin = "<b>Режиссер:</b>"
+	!end = "</span>"
+	remove xml tags
+	decode html
+	trim spaces
+    insert before ="Режия ► "
+    insert after = ".\n"
+
+  [fd page] var[fd_actor] 
+    !begin = "<b>Актеры:</b>"
+	!end = "</a></span>"
+	remove xml tags
+	decode html
+	trim spaces
+    insert before = "В Ролях ► "
+    insert after = ".\n"
+	
+ [fd page] var[fd_orig]
+   !begin = "<b>Зарубежное название:</b>"
+   !end = "</span>"
+    remove xml tags
+	decode html
+	trim spaces
+    insert before ="Оригинал ▪ "
+    insert after = ".\n"
+	
+ [fd page] var[fd_duration]
+    !begin = ">Продолжительность:</div>"
+	!begin = "<div class=\"fDop-r\">"
+    !end = "</div>"
+    remove xml tags
+	decode html
+	trim spaces
+	replace words = " / "
+	replace to = " ▪ " 
+    insert before = " ▪ "
+    	
+  [fd page] var[fd_cap]
+	var = Var[fd_genre] + Var[fd_country] + Var[fd_year] + Var[fd_rating] + Var[fd_duration]
+    insert after = "\n"
+	insert after = "---------------"
+    insert after = "\n"		
+
+   [fd page] var[fd_cap1]
+    var = Var[fd_directors] + Var[fd_actor] + Var[fd_orig] 
+    	
+   [fd]
+    result = Var[fd_cap] + Var[fd_desc] + Var[fd_cap1]
+
+
+;###############################################
+;;; ссылка для mayday ;;; 
+
+  [container] var[id]
+	var = Arr.Find[data_mayday, Var[title_2]]
+  [container] var[url_mayday]
+	var = Compare(Num(Var[id] = -1), "", Arr[data_mayday, Var[id] + 1])
+;;; 05.08.2026: CrashAvia переехал с домена .ru на .com
+	replace words = "https://crashavia.ru/"
+	replace to = "https://crashavia.com/"
+
+  [fd url] cookie[cook]
+	time out = 50
+	wait = 1.0
+	next if = Var[url_mayday]
+	url = Var[url_mayday]
+	
+  [fd global]
+    start = "<h1 class=\"heading-title\">"
+    finish = "<h2 class=\"heading"
+  [fd page] var[fd_desc]
+	!begin = "<div class=\"opisanie w-richtext\"><p>"
+	!end = "</div>"    
+	decode html
+    decode escape
+	remove xml tags   
+	remove duplicate spaces
+    trim spaces
+
+ [fd]
+	result =  Var[fd_desc]
+
+  [fd page] var[fd_image]
+	!begin = "\"items\": [{ \"url\": \""
+	!end = "\""
+
+  [fd image url] cookie[cook]
+	file name = Title + Series
+	url =  Var[fd_image]
+
+
+;#######################################################
+;;; dok-film.net
+;;; ссылка для dok-film.net ;;; https://dok-film.net/13488-ischeznuvshie-plemena-chelovechestva-the-lost-tribes-of-humanity.html
+  [container] var[id]
+	var = Arr.Find[data_dok_film, Var[title_2]]
+  [container] var[url_dok_film]
+	var = Compare(Num(Var[id] = -1), "", Arr[data_dok_film, Var[id] + 1])
+	
+  [fd url] cookie[cook]
+	time out = 100
+	wait = 0.5
+	next if = Var[url_dok_film]
+	url = Var[url_dok_film]
+	
+  [fd page] var[fd_image1]
+	!begin = "<div class=\"image\">"
+	!begin = "src=\""
+	!end = "\""
+	trim spaces
+
+  [fd page] var[fd_image2]
+	!begin = "<meta itemprop=\"thumbnailUrl\" content=\""
+	!end = "\""
+	trim spaces
+
+;если нет первого то оставить второй
+  [fd page] var[fd_image]
+	var = Compare(Str(Var[fd_image1] = ""), Var[fd_image2],Var[fd_image1])
+  [fd image url]  cookie[cook]
+	file name = Title + Series
+	url = NotEmpty(Var[fd_image], "https://dok-film.net" + Var[fd_image])
+  [fd page] var[fd_title1]
+	!begin = "<h1 itemprop=\"headline\">"
+	!end = "</h1>"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+  [fd page] var[fd_title2]
+	!begin = "<meta itemprop=\"name\" content=\""
+	!end = "\""
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+
+;если нет первого то оставить второй
+  [fd page] var[fd_title]
+	var = Compare(Str(Var[fd_title1] = ""), Var[fd_title2],Var[fd_title1])
+
+  [fd page] var[fd_desc1]
+	!begin = "<meta itemprop=\"description\" content=\""
+	!end = "\""
+	remove xml tags
+	decode html
+	remove words() = Arr.New["\n \n","\n\n","\n"," \n","\r","\r\n"]
+	remove duplicate spaces
+	trim spaces
+  [fd page] var[fd_desc2]
+	!begin = " itemprop=\"description\">"
+	!end = "</"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+	remove words() = Arr.New["\n \n","\n\n","\n"," \n","\r","\r\n"]
+	remove duplicate spaces
+	trim spaces
+
+;если нет первого то оставить второй
+  [fd page] var[fd_desc]
+	var = Var[fd_title] + "..." + Compare(Str(Var[fd_desc1] = ""), Var[fd_desc2],Var[fd_desc1])
+	trim letters = "..."
+  [fd]
+	result = Var[fd_desc]
+
+
+;################################################
+;;myshows.me
+
+  [container] var[title_myshows_year_mask]
+	var = Compare(Str(Var[year] = ""), "", " (" + Var[year] + ")")
+
+  [container] var[title_myshows]
+	var = Var[title]
+	remove after = Var[title_myshows_year_mask]
+	trim spaces
+
+  [container] var[title_myshows_year]
+	var = Compare(Str(Var[year] = ""), "", Var[title_myshows] + Var[title_myshows_year_mask])
+
+  [container] var[id_myshows]
+	var = Arr.Find[data_myshows, Var[title]]
+  [container] var[id_myshows]
+	var = Compare(Num(Var[id_myshows] = -1), Arr.Find[data_myshows, Var[title_myshows]], Var[id_myshows])
+  [container] var[id_myshows2]
+	var = Arr.Find[data_myshows, Var[title_myshows_year]]
+  [container] var[id]
+	var = Compare(Num(Var[id_myshows] = -1), Var[id_myshows2], Var[id_myshows])
+  [container] var[url_myshow]
+	var = Compare(Num(Var[id] = -1), "", Arr[data_myshows, Var[id] + 1])
+
+  [fd url] cookie[cook]
+    time out = 100
+    next if = Compare(Str(Var[url_myshow]<>""),"true","")
+	url = Var[url_myshow]
+
+  [fd global]
+    start = "class=\"TopNavigation__link\">Комментарии"
+    finish = "Также смотрят</span>"
+
+  [fd page] var[fd_image]
+	!begin = "movie-poster__picture"
+	!begin = "src=\""
+	!end = "\""
+	decode html
+	decode escape
+	trim spaces
+
+  [fd page] var[fd_image2]
+	!begin = "PicturePoster-picture"
+	!begin = "src=\""
+	!end = "\""
+	decode html
+	decode escape
+	trim spaces
+
+  [fd page] var[fd_image3]
+	!begin = "PicturePoster-picture"
+	!begin = "data-src=\""
+	!end = "\""
+	decode html
+	decode escape
+	trim spaces
+
+  [fd page] var[fd_image4]
+	!begin = "PicturePoster-picture"
+	!begin = "srcset=\""
+	!end = " "
+	decode html
+	decode escape
+	trim spaces
+
+  [fd page] var[fd_image_schema]
+	!begin = "\"@type\":\"Movie\""
+	!begin = "\"image\":\""
+	!end = "\""
+	decode html
+	decode escape
+	trim spaces
+
+  [fd page] var[fd_image_og]
+	!begin = "<meta property=\"og:image\" content=\""
+	!end = "\""
+	decode html
+	decode escape
+	trim spaces
+
+  [fd page] var[fd_image_twitter]
+	!begin = "<meta name=\"twitter:image\" content=\""
+	!end = "\""
+	decode html
+	decode escape
+	trim spaces
+
+  [fd image url] 
+    file name = Title + Series
+	url = Compare(Str(Var[fd_image] = ""), Compare(Str(Var[fd_image2] = ""), Compare(Str(Var[fd_image3] = ""), Compare(Str(Var[fd_image4] = ""), Compare(Str(Var[fd_image_og] = ""), Compare(Str(Var[fd_image_twitter] = ""), Var[fd_image_schema], Var[fd_image_twitter]), Var[fd_image_og]), Var[fd_image4]), Var[fd_image3]), Var[fd_image2]), Var[fd_image])
+
+  [fd page] var[countrys]
+	!begin = "<td class=\"info-row__title\">Страна:"
+	!end = "</td></tr>"
+ [fd page] arr[fd_countrys] all
+     var = Var[countrys]
+	!begin = "class=\"\">"
+	!end = "</a>"
+	 split = ","
+	remove xml tags
+	decode html
+    remove duplicate spaces
+	trim spaces
+
+  [fd page] var[fd_country_old] 
+    var = Arr.Join[fd_countrys,", "]
+    insert before = "Страна ▪ "
+    insert after = " ► "
+
+  [fd page] var[fd_country_new]
+	!begin = "Страна:"
+	!end = "Жанры:"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+	remove before = "Страна:"
+	remove after = "Жанры:"
+	trim spaces
+	insert before = "Страна ▪ "
+    insert after = " ► "
+	clear if like = "Страна: . "
+
+  [fd page] var[fd_country] 
+    var = Compare(Str(Var[fd_country_old] = ""), Var[fd_country_new], Var[fd_country_old])
+
+  [fd page] var[genres]
+	!begin = "<td class=\"info-row__title\">Жанры:"
+	!end = "</td></tr>"
+  [fd page] arr[fd_genres] all
+     var = Var[genres]
+	!begin = "class=\"\">"
+	!end = "</a>"
+	 split = ","
+	remove xml tags
+	decode html
+    remove duplicate spaces
+	trim spaces
+
+  [fd page] var[fd_genre_old] 
+    var = Arr.Join[fd_genres,", "]
+    insert before = "Жанр ▪ "
+    insert after = ".\n"
+
+  [fd page] var[fd_genre_new]
+	!begin = "Жанры:"
+	!end = "</td></tr><tr"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+	remove before = "Жанры:"
+	remove after = "Производство:"
+	trim spaces
+	insert before = "Жанр ▪ "
+    insert after = ".\n"
+	clear if like = "Жанр: .\n"
+
+  [fd page] var[fd_genre] 
+    var = Compare(Str(Var[fd_genre_old] = ""), Var[fd_genre_new], Var[fd_genre_old])
+
+  [fd page] var[fd_year_old]
+	!begin = ">Даты выхода:"
+	!end = "</td></tr><tr"
+    remove xml tags
+	decode html
+    remove duplicate spaces
+	trim spaces
+    insert before = "Дата выхода ▪ "
+    insert after = " ► "
+
+  [fd page] var[fd_year_new]
+	!begin = "Дата выхода:"
+	!end = "Страна:"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+	remove before = "Дата выхода:"
+	remove after = "Страна:"
+	trim spaces
+	insert before = "Дата выхода ▪ "
+    insert after = " ► "
+	clear if like = "Дата выхода: . "
+
+  [fd page] var[fd_year] 
+    var = Compare(Str(Var[fd_year_old] = ""), Var[fd_year_new], Var[fd_year_old])
+
+  [fd page] var[fd_duration_old]
+    !begin = "Длительность серии:"
+    !end = "</time>"
+    remove xml tags
+    decode html
+    remove duplicate spaces
+    trim spaces
+    insert before = "Длительность серии ▪ "
+
+  [fd page] var[fd_duration_new]
+	!begin = "Длительность:"
+	!end = "Посмотрел"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+	remove before = "Длительность:"
+	trim spaces
+	clear if like = ""
+	insert after = ". "
+
+  [fd page] var[fd_duration]
+	var = Compare(Str(Var[fd_duration_old] = ""), Var[fd_duration_new], Var[fd_duration_old])
+
+  [fd page] var[fd_desc]
+    !begin = "Описание</span><!--]--></h2><!--[--><!--]--></div><!----></div><!--[--><div class=\"HtmlContent\">"
+    !end = "</div>"
+    remove xml tags
+	decode html
+    remove duplicate spaces
+	trim spaces
+    insert before = "► " 
+    insert after = "\n"
+    insert after = "---------------"
+	insert after = "\n"
+
+  [fd page] var[fd_product_old] 
+    !begin = "Канал:"
+    !end = "</a>"
+    remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+    insert before = "Производство ▪ "
+    insert after = ".\n"
+
+  [fd page] var[fd_product_new]
+	!begin = "Производство:"
+	!end = "Смотрящих:"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+	remove before = "Производство:"
+	remove after = "Смотрящих:"
+	trim spaces
+	insert before = "Производство ▪ "
+    insert after = ".\n"
+	clear if like = "Производство: .\n"
+
+  [fd page] var[fd_product] 
+    var = Compare(Str(Var[fd_product_old] = ""), Var[fd_product_new], Var[fd_product_old])
+
+  [fd page] var[actors]
+	!begin = "class=\"Characters__list\""
+	!end = "</div></div></a><!--]-->"
+  [fd page] arr[fd_actors] all
+     var = Var[actors]
+	!begin = "<div class=\"Character__name\">"
+	!end = "<"
+	 split = ","
+	remove xml tags
+	decode html
+    remove duplicate spaces
+	trim spaces
+
+  [fd page] var[fd_actor] 
+    var = Arr.Join[fd_actors,", "]
+    insert before = "В Ролях ► "
+    insert after = ".\n"
+
+  [fd page] var[fd_imdb_old]
+    !begin = "<td class=\"info-row__title\">Рейтинг IMDB:"
+    !begin = "rel=\"nofollow noreferrer\">"
+    !end = "<"
+    remove xml tags
+    decode html
+    remove duplicate spaces
+    trim spaces
+    clear if like = "0.0"
+    insert before = "Рейтинг ▪ IMDb ["
+    insert after = "] "
+    insert after = "\n"
+
+  [fd page] var[fd_imdb_new]
+	!begin = "alt=\"imdb logo\""
+	!begin = "class=\"RatingProviders__value\">"
+	!end = "<"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+	remove before = "IMDb"
+	trim spaces
+	remove after = " "
+	trim spaces
+	clear if like = "0.0"
+	clear if like = ""
+	insert before = "Рейтинг ▪ IMDb ["
+	insert after = "] "
+
+  [fd page] var[fd_imdb] 
+    var = Compare(Str(Var[fd_imdb_new] = ""), Var[fd_imdb_old], Var[fd_imdb_new])
+
+[fd page] var[fd_kinopoisk]
+    !begin = "alt=\"kinopoisk logo\""
+	!begin = "class=\"RatingProviders__value\">"
+	!end = "<"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+	insert before = "Кинопоиск ["
+	insert after = "] "
+
+[fd page] var[fd_myshows]
+    !begin = "class=\"RatingInfo__total\">"
+	!end = "<"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+	insert before = "MyShows ["
+	insert after = " из 5] "
+	insert after = "\n"	
+
+[fd page] var[fd_cap2]
+	var = Var[fd_genre] + Var[fd_country] + Var[fd_year] + Var[fd_imdb] + Var[fd_kinopoisk] + Var[fd_myshows] + Var[fd_duration]
+	insert after = "\n"
+    insert after = "---------------"
+	insert after = "\n"
+
+[fd]
+result = Var[fd_cap2] + Var[fd_desc] + Var[fd_actor] + Var[fd_product]
+
+
+;####################################################
+;; gtorrent.cc
+
+  [container] var[id]
+	var = Arr.Find[data_kino_gtorrent, Var[title]]
+  [container] var[url_kino_gtorrent]
+	var = Compare(Num(Var[id] = -1), "", Arr[data_kino_gtorrent, Var[id] + 1])
+
+  [fd web] cookie[cook]
+	time out = 100
+	wait = 0.5
+    url = Var[url_kino_gtorrent]
+
+  [black list]
+	host = "gtorrent.cc"
+	host = "cdn.adfinity.pro"
+	host = "www.youtube.com"
+	host = "fonts.gstatic.com"
+    host = "googleads.g.doubleclick.net"
+	host = "static.doubleclick.net"
+    host = "kinopoisk-ru.clstorage.net"
+    host = "vak345.com"
+	host = "ads.betweendigital.com"
+	host = "graph.facebook.com"
+	host = "connect.mail.ru"
+    host = "vk.com"
+	host = "connect.ok.ru"
+    host = "api.pinterest.com"
+    host = "jnn-pa.googleapis.com"
+	host = "www.google.com"
+
+  [fd global]
+    start = "<div class=\"item-info-top\">"
+    finish = "<a title=\"Скачать с торрента:"
+	
+  [fd page] var[fd_image]
+	!begin = "<div class=\"preview\">"
+    !begin = "https:"
+	!end = "|"
+    insert before = "https:"
+	trim spaces
+
+  [fd image url] 
+    file name = Title + Series
+	url = Var[fd_image]
+
+  [fd page] arr[fd_direct]
+	!begin =">Режиссер:</td><td>"
+	!end = "</td></tr>"
+	remove xml tags
+	decode html
+    trim spaces
+    insert before ="Режиссер ► "
+    insert after = ".\n"
+
+  [fd page] var[fd_country]
+	!begin = ">Студия/Страна:</td><td>"
+	!end = "</td></tr>"
+	remove xml tags
+	decode html
+    trim spaces
+    insert before = "Страна ▪ "
+    insert after = " ► "
+
+  [fd page] var[fd_year]
+	!begin = ">Год выхода:</td><td>"
+    !end = "</td></tr>"
+	remove xml tags
+	decode html
+	trim spaces
+    insert before = "Год ▪ "
+    insert after = " ► "
+	
+  [fd page] var[fd_genre]
+    !begin = "Жанр:</td><td><a"
+	!end = "</a></td>"
+	decode escape
+	decode html
+	remove xml tags
+	remove duplicate spaces
+	trim spaces
+	replace words = ","
+	replace to = ", "
+    insert before = "Жанр ▪ "
+    insert after = ".\n"	
+
+  [fd page] arr[fd_actor] 
+	!begin =">В ролях:</td><td>"
+	!begin = ">"
+	!end = "</a></td></tr>"
+    remove from = "<a href"
+    remove to = ">"
+	decode html
+    remove xml tags
+	remove duplicate spaces
+	trim spaces
+    insert before = "В Ролях ► "
+    insert after = ".\n"
+
+  [fd page] var[fd_duration]
+    !begin = ">Длительность:</td><td>"
+    !end = "/td></tr>"
+    decode html
+    remove xml tags
+    trim spaces
+
+  [fd page] var[fd_desc]
+	!begin  = "<b>Краткое содержание:</b>"
+	!end = "<h2>"
+	remove xml tags
+	decode html
+	trim spaces
+    remove duplicate spaces
+    insert before = "► " 
+    insert after = "\n"
+    insert after = "---------------"
+	insert after = "\n"
+
+  [fd page] var[fd_cap2]
+	var = Var[fd_country] + Var[fd_year]  + Var[fd_duration]
+	insert after = "\n"
+    insert after = "---------------"
+	insert after = "\n"
+
+  [fd]
+     result = Var[fd_genre] + Var[fd_cap2] + Var[fd_desc] + Var[fd_direct]  + Var[fd_actor] 
+ 		
+
+;#################################################
+;;rutube
+
+  [container] var[id]
+	var = Arr.Find[data_rutube, Var[title_rutube]]
+  [container] var[url_rutube]
+	var = Compare(Num(Var[id] = -1), "", Arr[data_rutube, Var[id] + 1])
+
+  [fd url] cookie[cook]
+    time out = 100
+    next if = Compare(Str(Var[url_rutube]<>""),"true","")
+	url = Var[url_rutube]
+
+  [container] var[start_rutube]
+    var = Var[url_rutube]
+    remove before = "video/"
+    remove after = "/"
+    remove duplicate spaces
+    trim spaces
+
+  [fd global]
+    start = "\"video\":{\"id\":\"" + Var[start_rutube]
+    finish = "https://rutube.ru/video/" + Var[start_rutube]
+
+  [fd page] var[fd_desc]
+    !begin = "\"video\":{\"id\":\"" + Var[start_rutube]
+	!begin = "\"description\":\""
+	!end = "\","
+     decode html
+    remove xml tags
+    remove duplicate spaces
+    trim spaces
+	remove from = "Название серии:"
+	remove to = "\\n\\n"
+	remove after = "Поддержать канал"
+	remove after = "Я в VK"
+	remove words = "\\n"
+    insert before ="► "
+    insert after = "\n"
+	insert after = "---------------"
+    insert after = "\n"
+  
+  [fd page] var[fd_genre]
+	!begin = "\"genres\":[{\"name\":\""
+	!end = "\"}"
+	remove xml tags
+	decode html
+	insert before = "Жанр ▪ "
+	insert after = ".\n"
+
+  [fd page] var[fd_country]
+    !begin = "\"countries\":[\""
+	!end = "\""
+	remove xml tags
+	decode html
+	insert before = "Страна ▪ "
+	insert after = " ► " 
+	
+   [fd page] var[fd_year]
+    !begin = "{\"year\":\""
+    !end = "\""
+    remove xml tags
+	decode html
+	insert before = " Год ▪ "
+	insert after = " ► "
+
+  [fd page] var[fd_directors]
+	!begin ="\"directors\":["
+	!begin = "{\"name\":\""
+	!end = "\"}]"
+	remove xml tags
+	decode html
+	trim spaces
+	remove words() = Arr.New["{\"name\":\"","\"}","\""]
+	replace words = ","
+	replace to =", "
+    insert before ="Режиссер ► "
+    insert after = ".\n"
+
+  [fd page] var[fd_actors] 
+    !begin ="\"В ролях\"},\"persons\":["
+	!begin = "{\"name\":\""
+	!end = "\"}]"
+	remove xml tags
+	decode html
+	trim spaces
+	replace words = ","
+	replace to =", "
+	remove words() = Arr.New["{\"name\":\"","\"}","\""]
+    insert before = "В Ролях ► "
+	
+[fd page] var[fd_image]
+!begin = "\"video\":{\"id\":\"" + Var[start_rutube]
+	!begin = "\"thumbnail_url\":\""
+	!end = "\","
+
+  [fd image url] 
+	file name = Title
+	url =  Var[fd_image]
+	
+  [fd page] var[fd_cap]
+	 var = Var[fd_genre] + Var[fd_country] + Var[fd_year]
+     insert after = "\n"
+	 insert after = "---------------"
+     insert after = "\n"	
+ [fd]
+	result = Var[fd_cap] + Var[fd_desc] + Var[fd_directors] + Var[fd_actors]
+
+
+;#################################################
+;;; uft.lol
+;;; ссылка для uft.lol.com ;;; https://uft.lol/films/der-parol
+  [container] var[id]
+	var = Arr.Find[data_uft_lol, Var[title_2]]
+  [container] var[url_uft_lol]
+	var = Compare(Num(Var[id] = -1), "", Arr[data_uft_lol, Var[id] + 1])
+
+  [fd url] cookie[cook]
+	time out = 50
+	wait = 5.0
+	next if = Var[url_uft_lol]
+	url = Var[url_uft_lol]
+	
+  [fd page] var[fd_head]
+	!begin = "<head>"
+	!end = "</head>"
+	decode unicode
+	remove words() = Arr.New["\n \n","\n\n","\n"," \n","\r","\r\n"]
+	replace words() = Arr.New[" "]
+	replace to() = Arr.New[" "]
+	remove duplicate spaces
+	trim spaces
+  [fd page] var[fd_tbody]
+	!begin = "<table class=\"film_properties\">"
+	!end = "</table>"
+	decode unicode
+	remove words() = Arr.New["\n \n","\n\n","\n"," \n","\r","\r\n"]
+	replace words() = Arr.New[" "]
+	replace to() = Arr.New[" "]
+	remove duplicate spaces
+	trim spaces
+
+  [fd page] var[fd_IMDb]
+	!begin = "div class=\"rating_wrapper\">"
+	!begin = "<div class=\"details\">Рейтинг"
+	!end = "</div>"
+	remove after = "</"
+	remove words() = Arr.New["\n \n","\n\n","\n"," \n","\r","\r\n"]
+	replace words() = Arr.New[" "]
+	replace to() = Arr.New[" "]
+	remove xml tags
+	decode html
+	decode escape
+	remove duplicate spaces
+	trim spaces
+	clear if like = "0.0"
+	insert before = "Рейтинг ["
+	insert after = "] "
+
+  [fd page] var[fd_desc1]
+	var = Var[fd_head]
+	!begin = "\"description\":\""
+	!end = "\",\""
+	remove xml tags
+	decode html
+	decode escape
+	remove duplicate spaces
+	trim spaces
+  [fd page] var[fd_desc2]
+	!begin = "<div class=\"film_description entry-content\">"
+	begin = "Описание:<"
+	!end = "</div>"
+	remove words() = Arr.New["\n \n","\n\n","\n"," \n","\r","\r\n"]
+	replace words() = Arr.New[" "]
+	replace to() = Arr.New[" "]
+	remove xml tags
+	decode html
+	decode escape
+	remove duplicate spaces
+	trim spaces
+  [fd page] var[fd_desc3]
+	!begin = "<ul class=\"films\">"
+	!end = "</ul>"
+	replace words = "<td class=\"value\">"
+	replace to = "<td class=\"value\">: "
+	remove words() = Arr.New["\n \n","\n\n","\n"," \n","\r","\r\n"]
+	replace words() = Arr.New[" ","<div class=\"sinopsis\">","<div class=\"info\">. "]
+	replace to() = Arr.New[" ","<div class=\"sinopsis\">...","<div class=\"info\">"]
+	remove xml tags
+	decode html
+	decode escape
+	remove duplicate spaces
+	trim spaces
+	trim letters = "."
+	trim spaces
+;если нет первого то оставить второй
+  [fd page] var[fd_desc0]
+	var = Compare(Str(Var[fd_desc1] = ""), Var[fd_desc2],Var[fd_desc1])
+	remove duplicate spaces
+	trim spaces
+  [fd page] var[fd_desc]
+	var = Compare(Str(Var[fd_desc0] = ""), Var[fd_desc3],Var[fd_desc0])
+	remove duplicate spaces
+	trim spaces
+	insert before = "► "
+
+  [fd page] var[fd_image1]
+	var = Var[fd_head]
+	!begin = "\"image\":{\"@type\":\"ImageObject\",\"url\":\""
+	!end = "\""
+	remove xml tags
+	decode html
+	decode escape
+	remove duplicate spaces
+	trim spaces
+  [fd page] var[fd_image2]
+	var = Var[fd_head]
+	!begin = "<meta property=\"og:image\" content=\""
+	!end = "\""
+	remove xml tags
+	decode html
+	decode escape
+	remove duplicate spaces
+	trim spaces
+;если нет первого то оставить второй
+  [fd page] var[fd_image]
+	var = Compare(Str(Var[fd_image1] = ""), Var[fd_image2],Var[fd_image1])
+  [fd image url] cookie[cook]
+	file name = Title; + Series
+	url = Var[fd_image]
+
+  [fd page] var[fd_titl]
+	var = Var[fd_head]
+	!begin = "<title>"
+	!end = "</title>"
+	remove xml tags
+	decode html
+	decode escape
+	remove duplicate spaces
+	trim spaces
+
+  [fd page] var[fd_genre]
+	var = Var[fd_tbody]
+	!begin = "<tr class=\"genre\">"
+	!end = "</tr>"
+	replace words = "<td class=\"value\">"
+	replace to = "<td class=\"value\">: "
+	remove xml tags
+	decode html
+	decode escape
+	remove duplicate spaces
+	trim spaces
+
+  [fd page] var[fd_format]
+	var = Var[fd_tbody]
+	!begin = "<tr class=\"format\">"
+	!end = "</tr>"
+	replace words = "<td class=\"value\">"
+	replace to = "<td class=\"value\">: "
+	remove xml tags
+	decode html
+	decode escape
+	remove duplicate spaces
+	trim spaces
+	
+  [fd page] var[fd_source]
+	var = Var[fd_tbody]
+	!begin = "<tr class=\"source_film\">"
+	!end = "</tr>"
+	replace words = "<td class=\"value\">"
+	replace to = "<td class=\"value\">: "
+	remove xml tags
+	decode html
+	decode escape
+	remove duplicate spaces
+	trim spaces
+	
+  [fd page] var[fd_studio]
+	var = Var[fd_tbody]
+	!begin = "<tr class=\"studio\">"
+	!end = "</tr>"
+	replace words = "<td class=\"value\">"
+	replace to = "<td class=\"value\">: "
+	remove xml tags
+	decode html
+	decode escape
+	remove duplicate spaces
+	trim spaces
+	
+  [fd page] var[fd_year]
+	var = Var[fd_tbody]
+	!begin = "<tr class=\"year\">"
+	!end = "</tr>"
+	replace words = "<td class=\"value\">"
+	replace to = "<td class=\"value\">: "
+	remove xml tags
+	decode html
+	decode escape
+	remove duplicate spaces
+	trim spaces
+	
+  [fd page] var[fd_duration]
+	var = Var[fd_tbody]
+	!begin = "<tr class=\"duration\">"
+	!end = "</tr>"
+	replace words = "<td class=\"value\">"
+	replace to = "<td class=\"value\">: "
+	remove xml tags
+	decode html
+	decode escape
+	remove duplicate spaces
+	trim spaces
+	
+  [fd page] var[fd_fuck]
+	var = Var[fd_tbody]
+	!begin = "<tr class=\"bad_words\">"
+	!end = "</tr>"
+	replace words = "<td class=\"value\">"
+	replace to = "<td class=\"value\">: "
+	remove xml tags
+	decode html
+	decode escape
+	remove duplicate spaces
+	trim spaces
+	
+  [fd page] var[fd_montage]
+	var = Var[fd_tbody]
+	!begin = "<tr class=\"montage\">"
+	!end = "</tr>"
+	replace words = "<td class=\"value\">"
+	replace to = "<td class=\"value\">: "
+	remove xml tags
+	decode html
+	decode escape
+	remove duplicate spaces
+	trim spaces
+
+  [fd page] var[fd_cap+]
+	var = Var[fd_desc] + Compare(Str(Var[fd_titl] = ""), "","," + Var[fd_titl]) + Compare(Str(Var[fd_genre] = ""), "","," + Var[fd_genre]) + Compare(Str(Var[fd_format] = ""), "","," + Var[fd_format]) + Compare(Str(Var[fd_source] = ""), "","," + Var[fd_source]) + Compare(Str(Var[fd_studio] = ""), "","," + Var[fd_studio]) + Compare(Str(Var[fd_year] = ""), "","," + Var[fd_year]) + Compare(Str(Var[fd_duration] = ""), "","," + Var[fd_duration]) + Compare(Str(Var[fd_fuck] = ""), "","," + Var[fd_fuck]) + Compare(Str(Var[fd_montage] = ""), "","," + Var[fd_montage])
+	remove words() = Arr.New["\n \n","\n\n","\n"," \n","\r","\r\n"]
+	trim letters = "..."
+	trim letters = ","
+	trim spaces
+  [fd]
+	result = Var[fd_cap+]
+
+
+;#####################################################
+;;; erokrad.top — прямой разбор только по ссылке из title_erokrad.txt.
+
+  [container] var[id]
+	var = Arr.Find[data_erokrad, Var[title_erokrad]]
+
+  [container] var[url_erokrad]
+	var = Compare(Num(Var[id] = -1), "", Arr[data_erokrad, Var[id] + 1])
+
+  [fd url] cookie[cook]
+	time out = 100
+	wait = 0.5
+	next if = Var[url_erokrad]
+	url = Var[url_erokrad]
+
+  [black list]
+	host = "mc.yandex.ru"
+	host = "yandex.ru"
+	host = "googleads.g.doubleclick.net"
+	host = "static.doubleclick.net"
+	host = "fonts.gstatic.com"
+	host = "vk.com"
+	host = "connect.mail.ru"
+	host = "connect.ok.ru"
+
+  [fd global]
+    start = "<div class=\"page__main\">"
+    finish = "<script type=\"text/javascript\">"
+	
+  [fd page] var[fd_image]
+    !begin = "<div class=\"item-page__poster\">"
+	!begin = "<img src=\""
+	!end = "\""
+    trim spaces
+	insert before = "https://erokrad.top"
+
+  [fd image url] 
+    file name = Title + Series
+	url = Var[fd_image]
+	
+  [fd page] var[fd_year]
+    !begin = "Год:"
+    !end = "</li>"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces 
+	insert before = " Год ▪ "
+	insert after = " "
+
+  [fd page] var[fd_country]
+    !begin = "Страна:"
+	!end = "</li>"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces 
+	remove words = ":"
+	insert before = "Страна ▪ "
+	insert after = " "
+
+  [fd page] var[fd_studio]
+    !begin = "Студия:"
+	!end = "</li>"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces 
+	remove words = ":"
+	insert before = "Студия ▪ "
+	insert after = " "
+
+  [fd page] var[fd_duration]
+    !begin = "Продолжительность:"
+    !end = "</li>"
+    remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces 
+    insert before = " Продолж. ▪ "
+    insert after = " ▪"
+
+  [fd page] var[fd_directors]
+	!begin = "Режиссёр:"
+	!end = "</li>"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces 
+    insert before ="Режия ► "
+    insert after = ".\n"
+
+  [fd page] var[fd_actors] 
+    !begin = "Актёры:"
+	!end = "</li>"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces 
+    insert before = "В Ролях ► "
+    insert after = ".\n"
+ 
+  [fd page] var[fd_desc]
+   !begin = "<div class=\"full-text clearfix\">"
+   !end = "</div>"
+    remove xml tags
+	decode html
+    remove duplicate spaces
+	trim spaces
+    insert before = "► "
+    insert after = "\n"
+	insert after = "---------------"
+    insert after = "\n" 
+	
+  [fd page] var[fd_cap]
+    var = Var[fd_country] + Var[fd_year] + Var[fd_duration] + "\n" + Var[fd_studio]
+	remove duplicate spaces
+	trim spaces
+	insert after = "\n"
+	insert after = "---------------"
+    insert after = "\n"
+	
+   [fd]
+      result = Var[fd_cap] + Var[fd_desc] + Var[fd_directors] + Var[fd_actors]	
+
+;####################################################	
+;;; ссылка для porno ;;; 
+  [container] var[id]
+	var = Arr.Find[data_porno, Var[title_porno]]
+  [container] var[url_porno]
+	var = Compare(Num(Var[id] = -1), "", Arr[data_porno, Var[id] + 1])
+
+;;; Поиск в porno
+  [fd url] cookie[cook]
+	next if = Compare(Str(Var[url_porno] = ""), Compare(Num(Var[id_porno_ch] = -1), "", "true"), "")
+	url = "https://opensharing.org/search.php?tracker_search=torrent&keywords=" + Var[title_porno]
+
+  [fd page] var[url_porno]
+	!begin = "Тема: <a href=\"./viewtopic.php?"
+    !end = "&amp;hilit"
+    decode html
+    decode unicode
+    insert before = "https://opensharing.org/viewtopic.php?"
+	
+  [fd url] cookie[cook]
+	url = Var[url_porno]
+	
+  [fd page] var[fd_desc]
+	!begin = "Описание"
+	!end = "<br"     
+	decode html
+    decode escape
+	remove xml tags
+    decode unicode
+	remove duplicate spaces
+    trim spaces
+    trim letters = "\""
+    trim letters = ":"
+    insert before = "► "
+	
+   [fd]
+	  result =  Var[fd_desc]
+
+  [fd page] var[fd_image]
+	!begin = "<div id=\"sliderPoster\""
+    !begin = "<a href=\""	
+    !end = "\""
+
+  [fd image url] cookie[cook]
+	file name = Title + Series
+	url =  Var[fd_image]
+	
+	
+;######################################################	
+;;; anu.tizam.org — прямой разбор только по ссылке из title_erokrad.txt.
+
+  [container] var[id]
+	var = Arr.Find[data_tizam, Var[title_erokrad]]
+
+  [container] var[url_tizam]
+	var = Compare(Num(Var[id] = -1), "", Arr[data_tizam, Var[id] + 1])
+
+  [fd url] cookie[cook]
+	time out = 100
+	wait = 0.5
+	next if = Var[url_tizam]
+	url = Var[url_tizam]
+
+  [black list]
+	host = "mc.yandex.ru"
+	host = "yandex.ru"
+	host = "googleads.g.doubleclick.net"
+	host = "static.doubleclick.net"
+	host = "fonts.gstatic.com"
+	host = "vk.com"
+	host = "connect.mail.ru"
+	host = "connect.ok.ru"
+
+  [fd global]
+    start = "<div class=\"film\">"
+    finish = "<script type=\"text/javascript\">"
+	
+  [fd page] var[fd_image]
+    !begin = "itemprop=\"associatedMedia\""
+	!begin = "href=\""
+	!end = "\""
+    trim spaces
+	insert before = "https://anu.tizam.org/"
+
+  [fd image url] 
+    file name = Title + Series
+	url = Var[fd_image]
+	
+  [fd page] var[fd_year]
+    !begin = "Год выпуска:"
+    !begin = "<span>"
+	!end = "</span>"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces 
+	insert before = " Год ▪ "
+	insert after = " "	
+	
+  [fd page] var[fd_country1]
+    !begin = "Производство:"
+	!begin = "<span>"
+	!end = "</span>"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces 
+  [fd page] var[fd_country2]
+    !begin = "Выпущено:"
+	!begin = "<span>"
+	!end = "</span>"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces 
+  [fd page] var[fd_country3]
+    !begin = "Режиссер:"
+	!begin = "<span>"
+	!end = "</span>"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces 
+  [fd page] var[fd_country]
+    var = Var[fd_country1] + Var[fd_country2] + Var[fd_country3]
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces 
+	remove words = ":"
+	insert before = "Выпущено ▪ "
+	insert after = " "
+
+  [fd page] var[fd_duration]
+    !begin = "Продолжительность:"
+    !begin = "<span>"
+	!end = "</span>"
+    remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces 
+    insert before = " Продолж. ▪ "
+    insert after = " ▪"
+ 
+  [fd page] var[fd_desc]
+   !begin = "<div class=\"film__text\">"
+   !begin = "<p>"
+   !end = "</p>"
+    remove xml tags
+	decode html
+    remove duplicate spaces
+	trim spaces
+    insert before = "► "
+	
+  [fd page] var[fd_cap]
+    var = Var[fd_country] + Var[fd_year] + Var[fd_duration]
+	remove duplicate spaces
+	trim spaces
+	insert after = "\n"
+	insert after = "---------------"
+    insert after = "\n"
+	
+   [fd]
+       result = Var[fd_cap] + Var[fd_desc]		
+	
+;##############################################
+;;; kino.mail.ru
+
+  [container] var[url_kino_mail]
+	var = ""
+	
+  [container] var[id]
+	var = Arr.Find[data_kino_mail_serial_url, Var[title]]
+  [container] var[url_kino_mail]
+	var = Compare(Str(Var[url_kino_mail] = ""), Compare(Num(Var[id] = -1), "", Arr[data_kino_mail_serial_url, Var[id] + 1]), Var[url_kino_mail])
+
+;;; ссылка для kino.mail.ru c title_url_kino.mail.ru.txt
+  [container] var[id]
+	var = Arr.Find[data_kino_mail, Var[title]]
+  [container] var[url_kino_mail]
+	var = Compare(Str(Var[url_kino_mail] = ""), Compare(Num(Var[id] = -1), "", Arr[data_kino_mail, Var[id] + 1]), Var[url_kino_mail])
+
+;;; ссылка для kino.mail.ru c channel_url_kino.mail.ru.txt
+  [container] var[id]
+	var = Arr.Find[data_kino_mail_ch_url, Channel.Number]
+  [container] var[url_kino_mail]
+	var = Compare(Str(Var[url_kino_mail] = ""), Compare(Num(Var[id] = -1), "", Arr[data_kino_mail_ch_url, Var[id] + 1]), Var[url_kino_mail])
+	
+;;; Поиск в kino.mail.ru
+  [fd url] 
+	time out = 100
+	wait = 1.0
+	"Cookie" = "p=ILsAAFQ52vYA; ph_ShowedSnowHint=1; mrcu=86414ae97c7bb69274f96f519997; recolawShown=1; ph_v_tv-mail-ru=1; oid=4ScCm916A4Thxezub3Jbv; act=bcf43257d4474671bb599d5c7831a820; Mpop=1756203126:0179626c6402437c1b4774595f5e7b7a71580b1058585e591b4441:istradins@mail.ru:; t=obLD1AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAACAABEGrwcA; b=ZU8BAKA83GgCAQAACCfjALUB; mtrc=%7B%22mytrackerid%22%3A52844%7D; domain_sid=3ZxemYTOzRAmsqzEbY1Sd%3A1756204229708; _ga_D25JM4Q153=GS2.1.s1756204230$o1$g0$t1756204230$j60$l0$h2027692028; _ga=GA1.1.480154767.1756204230; i=AQBNiK1oAQAqAAUCAfQ=; tmr_lvid=339cdb9eb62b27ce932f92c8345fcc48; tmr_lvidTS=1756204231083; tmr_detect=0%7C1756204233397; VID=16lMr82M6r2Y00002n1ZPK2Y:::dc7e136-0-0-dc7e171-0-dc7e587:CAASEMeIbgxg3TIEoG__v7YoSB4aYNlelYqB90lEF-NDZ7m8zJKEDdNslNG85BdigsGWEv3I5ZpI8RDBXc6QW4DNUAaaazX6zn04tVgDjPqJS3mfmrbY68TZat55SIP0lK9S2IZT2kPw175CtKvnzo6qWuUQJg; c=yIytaAMAIE8RAAAkAAQA8/VZySJACQCAX1S5yaYA"
+	next if = Compare(Str(Var[url_kino_mail] = ""), Compare(Str(Var[url_rezka] = ""), Compare(Str(Var[url_seasonvar] = ""), Compare(Str(Var[url_dokonlin] = ""), Compare(Str(Var[url_youtube] = ""), Compare(Str(Var[url_kinogo] = "") , Compare(Str(Var[url_mayday] = ""), Compare(Str(Var[url_dok_film] = ""), Compare(Str(Var[url_myshow] = ""), Compare(Str(Var[url_kino_gtorrent] = ""), Compare(Str(Var[url_rutube] = ""), Compare(Str(Var[url_uft_lol] = ""), Compare(Str(Var[url_erokrad] = ""), Compare(Str(Var[url_porno] = ""), Compare(Str( Var[url_tizam] = ""), Compare(Str(Var[chan] = "1"), "", "true"), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), "")
+	url = "https://kino.mail.ru/search/?region_id=285&q=" + Var[serial_mail]
+
+  [fd page] var[url_kino_mail]
+	!begin = "<div class=\"bacc45d16a f2c792a3f4\"><a href=\""
+	!end = "\""
+	decode html
+	remove duplicate spaces
+	trim spaces
+
+  [fd page] var[km_search_movie_rel]
+	!begin = "href=\"/cinema/movies/"
+	!end = "\""
+	decode html
+	remove duplicate spaces
+	trim spaces
+	insert before = "https://kino.mail.ru/cinema/movies/"
+
+  [fd page] var[km_search_movie_abs]
+	!begin = "href=\"https://kino.mail.ru/cinema/movies/"
+	!end = "\""
+	decode html
+	remove duplicate spaces
+	trim spaces
+	insert before = "https://kino.mail.ru/cinema/movies/"
+
+  [fd page] var[km_search_series_rel]
+	!begin = "href=\"/series_"
+	!end = "\""
+	decode html
+	remove duplicate spaces
+	trim spaces
+	insert before = "https://kino.mail.ru/series_"
+
+  [fd page] var[km_search_series_abs]
+	!begin = "href=\"https://kino.mail.ru/series_"
+	!end = "\""
+	decode html
+	remove duplicate spaces
+	trim spaces
+	insert before = "https://kino.mail.ru/series_"
+
+  [fd page] var[km_search_fallback]
+	var = Compare(Str(Var[km_search_movie_rel] = ""), Compare(Str(Var[km_search_movie_abs] = ""), Compare(Str(Var[km_search_series_rel] = ""), Var[km_search_series_abs], Var[km_search_series_rel]), Var[km_search_movie_abs]), Var[km_search_movie_rel])
+
+  [fd page] var[url_kino_mail]
+	var = Compare(Str(Var[url_kino_mail] = ""), Var[km_search_fallback], Var[url_kino_mail])
+	
+;;; Полное описание с kino.mail.ru
+  [fd url]
+	time out = 100
+	wait = 0.5
+	"Cookie" = "p=ILsAAFQ52vYA; ph_ShowedSnowHint=1; mrcu=86414ae97c7bb69274f96f519997; recolawShown=1; ph_v_tv-mail-ru=1; oid=4ScCm916A4Thxezub3Jbv; act=bcf43257d4474671bb599d5c7831a820; Mpop=1756203126:0179626c6402437c1b4774595f5e7b7a71580b1058585e591b4441:istradins@mail.ru:; t=obLD1AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAACAABEGrwcA; b=ZU8BAKA83GgCAQAACCfjALUB; mtrc=%7B%22mytrackerid%22%3A52844%7D; domain_sid=3ZxemYTOzRAmsqzEbY1Sd%3A1756204229708; _ga_D25JM4Q153=GS2.1.s1756204230$o1$g0$t1756204230$j60$l0$h2027692028; _ga=GA1.1.480154767.1756204230; i=AQBNiK1oAQAqAAUCAfQ=; tmr_lvid=339cdb9eb62b27ce932f92c8345fcc48; tmr_lvidTS=1756204231083; tmr_detect=0%7C1756204233397; VID=16lMr82M6r2Y00002n1ZPK2Y:::dc7e136-0-0-dc7e171-0-dc7e587:CAASEMeIbgxg3TIEoG__v7YoSB4aYNlelYqB90lEF-NDZ7m8zJKEDdNslNG85BdigsGWEv3I5ZpI8RDBXc6QW4DNUAaaazX6zn04tVgDjPqJS3mfmrbY68TZat55SIP0lK9S2IZT2kPw175CtKvnzo6qWuUQJg; c=yIytaAMAIE8RAAAkAAQA8/VZySJACQCAX1S5yaYA"
+	next if = Compare(Str(Var[url_kino_mail] <> ""), Compare(Str(Var[url_rezka] = ""), Compare(Str(Var[url_seasonvar] = ""), Compare(Str(Var[url_dokonlin] = ""), Compare(Str(Var[url_youtube] = ""), Compare(Str(Var[url_kinogo] = "") , Compare(Str(Var[url_mayday] = ""), Compare(Str(Var[url_dok_film] = ""), Compare(Str(Var[url_myshow] = ""), Compare(Str(Var[url_kino_gtorrent] = ""), Compare(Str(Var[url_rutube] = ""), Compare(Str(Var[url_uft_lol] = ""), Compare(Str(Var[url_erokrad] = ""), Compare(Str(Var[url_porno] = ""), Compare(Str( Var[url_tizam] = ""), Compare(Str(Var[chan] = "1"), "", "true"), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), "")
+	url = Var[url_kino_mail]
+
+  [fd global] 
+    start = "<meta itemProp=\"name\" content=\""
+    finish = ">Показать полностью<"
+
+  [fd page] var[fd_kino_mail_top]
+    !begin = "data-logger=\"kino__EventInfo\">"
+    !end = ">О чем "
+
+  [fd page] var[fd_image]
+    var = Var[fd_kino_mail_top]
+    !begin = "постер\" src=\""
+    !end = "\""
+    trim spaces
+  [fd image url] 
+	file name = Title + Series
+	url = Var[fd_image]
+	
+  [fd page] var[fd_rating]
+	!begin = "class=\"d5da557a9d\">"
+	!end = "<"
+	remove xml tags
+	decode html
+	trim spaces
+	clear if like = "0.0"
+	insert before = " Наш Рейтинг ["
+	insert after = "] "	
+
+  [fd page] var[fd_IMDb]
+	!begin = ">IMDb<"
+	!end = "</div>"
+	remove xml tags
+	decode html
+	trim spaces
+	clear if like = "0.0"
+	insert before = "IMDb ["
+	insert after = "] "
+
+  [fd page] var[fd_pre_director]
+    !begin  = ">Режиссер"
+    !end = "class=\"e8af6e3567\">"
+  [fd page] arr[fd_directors] all
+	var = Var[fd_pre_director]
+	!begin = "rel=\"\">"
+	!end = "<"
+    split = ","
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+  [fd page] var[fd_directors_all]
+    var = Arr.Join[fd_directors,","]
+	
+  [fd page] arr[fd_proverka_director]
+    var = Var[fd_directors_all]
+    clear if like = ","
+
+  [fd page] arr[fd_director]
+    var = Compare(Str(Var[fd_proverka_director] = ""), Compare(Str(Var[fd_directors_all] = ""), "", "Режиссер ► " + Var[fd_directors_all]), Compare(Str(Var[fd_directors_all] = ""), "", "Режиссеры ► " + Var[fd_directors_all]))
+    insert after = ".\n"
+
+  [fd page] var[fd_country]
+    !begin = ">Страна<"
+    !end = "</a></div>"
+    remove xml tags
+    decode html
+    remove duplicate spaces
+    trim spaces
+    insert before = "Страна ▪ "
+    insert after = " ► "
+
+  [fd page] var[fd_year]
+    !begin = "class=\"c09f4f7dca aa6dbbff08\""
+	!begin = "\">"
+	!end = "class="
+	decode escape
+	decode html
+	remove xml tags
+	remove duplicate spaces
+	trim spaces
+    insert before = "Год ▪ "
+    clear if like ="Год: ."
+    insert after = " ► "
+
+  [fd page] arr[fd_genres] all
+	!begin = "class=\"a0ad36e382 d91597d529\">"
+	!end = "</div>"
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+  [fd page] var[fd_genre]
+    var = Arr.Join[fd_genres,", "]
+    insert before = "Жанр ▪ "
+
+  [fd page] var[fd_pre_ved]
+    !begin  = ">Ведущие<"
+    !end = "<div class=\"e8af6e3567"
+
+  [fd page] arr[fd_veds] all
+	var = Var[fd_pre_ved]
+	!begin = "rel=\"\">"
+	!end = "<"
+    split = ","
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+  [fd page] var[fd_ved]
+    var = Arr.Join[fd_veds,","]
+    insert before = "Ведущие ▪ "
+    insert after = ".\n"
+	insert after = "---------------"
+	insert after = ".\n"
+
+  [fd page] var[fd_pre_actors]
+    !begin  = ">В ролях<"
+    !end = "class=\"e8af6e3567\">"
+  [fd page] arr[fd_actors] all
+	var = Var[fd_pre_actors]
+	!begin = "rel=\"\">"
+	!end = "<"
+    split = ","
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+  [fd page] var[fd_actor]
+    var = Arr.Join[fd_actors,","]
+    insert before = "В Ролях ► "
+    insert after = ".\n"
+	insert after = "---------------"
+	insert after = ".\n"
+
+  [fd page] var[fd_name_eng_2]
+    !begin = "\"alternativeHeadline\" content=\""
+    end = "\""
+    decode html
+    remove xml tags
+    decode html
+    decode unicode
+    remove duplicate spaces
+    trim spaces
+    insert before = "Оригинальное название ▪ \""
+    insert after = "\".  "
+    insert after = "\n"
+
+  [fd page] var[fd_pre_awards]
+    !begin = ">Все награды<"
+    !end = "class=\"a1e415f111\"><h2 data-qa=\"Text\""
+  [fd page] arr[fd_awards] all
+	var = Var[fd_pre_awards]
+	!begin = "<a title=\""
+	!end = "\""
+    split = ","
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+  [fd page] var[fd_awards]
+    var = Arr.Join[fd_awards,"; "]
+    insert before = "Награды ▪ "
+
+  [fd page] var[fd_duration]
+    !begin = "\"TEST_IDS__TEVENT_META__duration\">"
+    !end = "</span>"
+    remove xml tags
+    trim spaces
+    insert before = " ▪ "
+
+  [fd page] var[fd_pre_producer]
+    !begin  = ">Продюсер"
+    !end = "<div class=\"e8af6e3567"
+  [fd page] arr[fd_producers] all
+	var = Var[fd_pre_producer]
+	!begin = "rel=\"\">"
+	!end = "<"
+    split = ","
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+  [fd page] var[fd_producers_all]
+    var = Arr.Join[fd_producers,","]
+	
+  [fd page] arr[fd_proverka_producer]
+    var = Var[fd_producers_all]
+    clear if like = ","
+
+  [fd page] arr[fd_producer]
+    var = Compare(Str(Var[fd_proverka_producer] = ""), Compare(Str(Var[fd_producers_all] = ""), "", "Продюсеры ▪ " + Var[fd_producers_all]), Compare(Str(Var[fd_producers_all] = ""), "", "Продюсер ▪ " + Var[fd_producers_all]))
+    insert after = ".\n"
+
+  [fd page] var[fd_pre_writer]
+    !begin  = ">Сценарий<"
+    !end = "<div class=\"e8af6e3567"
+  [fd page] arr[fd_writers] all
+	var = Var[fd_pre_writer]
+	!begin = "rel=\"\">"
+	!end = "<"
+    split = ","
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+  [fd page] var[fd_writer]
+    var = Arr.Join[fd_writers,","]
+    insert before = "Сценарий ▪ "
+    insert after = ".\n"
+
+  [fd page] var[fd_pre_operator]
+    !begin  = ">Оператор"
+    !end = "<div class=\"e8af6e3567"
+  [fd page] arr[fd_operators] all
+	var = Var[fd_pre_operator]
+	!begin = "rel=\"\">"
+	!end = "<"
+    split = ","
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+  [fd page] var[fd_operators_all]
+    var = Arr.Join[fd_operators,","]
+	
+  [fd page] arr[fd_proverka_operator]
+    var = Var[fd_operators_all]
+    clear if like = ","
+
+  [fd page] arr[fd_operator]
+    var = Compare(Str(Var[fd_proverka_operator] = ""), Compare(Str(Var[fd_operators_all] = ""), "", "Операторы ▪ " + Var[fd_operators_all]), Compare(Str(Var[fd_operators_all] = ""), "", "Оператор ▪ " + Var[fd_operators_all]))
+    insert after = ".\n"
+
+  [fd page] var[fd_pre_composer]
+    !begin  = ">Композитор"
+    !end = "<div class=\"e8af6e3567"
+  [fd page] arr[fd_composers] all
+	var = Var[fd_pre_composer]
+	!begin = "rel=\"\">"
+	!end = "<"
+    split = ","
+	remove xml tags
+	decode html
+	remove duplicate spaces
+	trim spaces
+  [fd page] var[fd_composers_all]
+    var = Arr.Join[fd_composers,","]
+	
+  [fd page] arr[fd_proverka_composer]
+    var = Var[fd_composers_all]
+    clear if like = ","
+
+  [fd page] arr[fd_composer]
+    var = Compare(Str(Var[fd_proverka_composer] = ""), Compare(Str(Var[fd_composers_all] = ""), "", "Композиторы ▪ " + Var[fd_composers_all]), Compare(Str(Var[fd_composers_all] = ""), "", "Композитор ▪ " + Var[fd_composers_all]))
+    insert after = ".\n"
+
+  [fd page] var[fd_budget]
+    !begin = ">Бюджет</span><div class=\""
+    !begin = ">"
+    !end = "<"
+    remove xml tags
+    trim spaces
+    insert before = "Бюджет ▪ "
+    insert after =".  "
+	
+  [fd page] var[fd_desc]
+    !begin = "class=\"ba25837e39 d359dca22e\""
+    !begin ="<p>"
+	!end = "class=\"c9a18328b8\""
+	replace words = "</p><p>"
+	replace to = "\n ... "
+	remove xml tags
+	decode html
+	remove words() = Arr.New["<nobr>","</nobr>"]
+	replace words() = Arr.New[".«","?«","!«"]
+    replace to() = Arr.New[".\n...«","?\n...«","!\n...«"]
+    replace words() = Arr.New["\n... ","\n......"]
+    replace to() = Arr.New["\n...","\n..."]
+	replace words() = Arr.New["\n...\n...«","\n... \n...«","\n...\n... «"]
+    replace to() = Arr.New["\n...«","\n...«","\n...«"]
+	trim spaces
+    remove duplicate spaces
+	insert before = "► "
+    insert after = "\n"
+	insert after = "---------------"
+	insert after = "\n"
+  
+  [fd page] var[fd_sloganrus]
+    !begin = ">Российский слоган</span><div class="
+    !begin = ">"
+    !end = "<"
+    decode html
+    remove xml tags
+    decode html
+    decode unicode
+    remove duplicate spaces
+    trim spaces
+    insert before = "Российский слоган ▪ "
+    insert after = "\n"
+
+  [fd page] var[fd_sloganorig]
+    !begin = ">Официальный слоган</span><div class"
+    !begin = ">"
+    !end = "<"
+    decode html
+    remove xml tags
+    decode html
+    decode unicode
+    remove duplicate spaces
+    trim spaces
+    insert before = "Официальный слоган ▪ "
+    insert after = "\n"
+
+  [fd page] var[fd_premiere]
+    !begin = ">Премьера<"
+    !begin = "\">"
+    !end = "<div class=\"e8af6e3567"
+    decode html
+    remove xml tags
+    remove duplicate spaces
+    trim spaces
+    replace words = "(Мир)"
+    replace to = "(Мир) ▪ "
+    replace words = "(РФ)"
+    replace to ="(РФ) ▪ "
+    insert before = "Премьера ▪ "
+    insert after = "\n"
+
+  [fd page] var[fd_budget_awards]
+    var = Var[fd_budget] + Var[fd_awards]
+    insert after = "\n"
+
+  [fd page] var[fd_manufacturer]
+    !begin = ">Производитель<"
+    !begin = "class=\"c09f4f7dca\" rel=\"\">"
+    !end = "</a></div>"
+    decode html
+    remove xml tags
+    remove duplicate spaces
+    trim spaces
+    insert before = "Производство ▪ "
+    insert after = ". "
+
+  [fd page] var[fd_age]
+    !begin = "class=\"e1b7c214ca\">"
+    !end = "<"
+    decode html
+    remove xml tags
+    remove duplicate spaces
+    trim spaces
+    insert before = " ▪ ["
+    insert after = "]"
+    replace words = " +"
+    replace to = "+"
+
+  [fd page] var[fd_cap1]
+    var = Var[fd_genre] + Var[fd_age]
+    insert after = "\n"
+ 
+  [fd page] var[fd_capr]
+    var = Var[fd_rating] + Var[fd_IMDb]
+    insert after = "\n" 
+ 
+  [fd page] var[fd_cap2]
+	var = Var[fd_country] + Var[fd_manufacturer] + Var[fd_year]  + Var[fd_capr] + Var[fd_duration]
+	remove duplicate spaces
+    trim spaces
+    insert after = "\n"
+    insert after = "---------------"
+	insert after = "\n"
+	
+  [fd page] var[fd_kino_mail_desc_check]
+	var = Var[fd_desc]
+	remove words() = Arr.New["...","\n","\r"]
+	remove duplicate spaces
+	trim spaces	
+
+   [fd]
+     result = Compare(Str(Var[fd_image] = ""), "", Compare(Str(Var[fd_kino_mail_desc_check] = ""), "", Var[fd_cap1] + Var[fd_cap2] + Var[fd_desc] + Var[fd_director] + Var[fd_actor]  + Var[fd_ved] +  Var[fd_producer] + Var[fd_writer] + Var[fd_composer] + Var[fd_operator] + Var[fd_name_eng_2] + Var[fd_sloganorig] + Var[fd_sloganrus] + Var[fd_premiere] + Var[fd_budget_awards])) 
+
+		
+
+;#######################################################
+; kinopoisk – TXT + SEARCH
+  [container] var[id]
+    var = Arr.Find[data_kino_kinopoisk, Var[title]]
+
+  [container] var[url_kino_kinopoisk]
+    var = Compare(Num(Var[id] = -1), "", Arr[data_kino_kinopoisk, Var[id] + 1])
+
+; SEARCH
+  [fd web]
+    time out = 100
+    wait = 0.5
+    "Cookie" = " yashr=2618284221755166483; i=6m58WSAnlwla8WRWoGPxWQ/OLoZG1JhYK6AWwVVCvvZFfDJBGzLtyXS4hE9lxxj2um2sy5YCZTA16m7+bWryC8zS+4I=; yandexuid=7210040671755461507; spravka=dD0xNzU1NDYxNzQ4O2k9ODguOTcuMjEzLjE2MjtEPTdFRjM3OTM2RUI2RDc5REQyNTk3QTAyQTdDOTEwOEI1QzU0MTYxRkFCNzA4QzJCMDc2MUUxNDQ0OUNDM0MxNzIxNTQyNjIxMDI5OTIxRTlEOEZGQ0YwRTQ3NzM2QjNCQ0U5MDVDMjMyRjRERjBBQjRENTIyNzdBMTMxRjYxRkE3RDkyNDg4RkU2QUQzNzIxNzAyMDYyNzA5ODY4MDRGOTNDQzFDQTM7dT0xNzU1NDYxNzQ4NTMyNDc0NTg0O2g9Yzg0ZTAyNmJhYjQwYmRlYTk2MmIwMTY0ZTFlMWIwODI=; PHPSESSID=cf7267114bd156bc6f0c7e6b1256626e; crookie=7FyDBcXL03oFjMLgzVPfMIE/jo/uFHRtbD6VC2/Qo6RPPLSKns4edUJyZxscxvMkVhUxfY8XfrWQRVNqRTDiP1Vz9pM=; cmtchd=MTc1NjQxNTE4NzYyOA==; coockoos=1; sso_status=sso.passport.yandex.ru:synchronized; _csrf=nSBufX4iK-pYrxH7a9GpQoWK; desktop_session_key=4f76c5ae5799d66a27cb8b405db75459f42644f66caaa88962f2beaf5d09e4b69d9519a1901e03534cb656fcb9ab27d1063e51bbc1a7911d0a883b57f7af5a403d28c26599386856d2f1f800c2945db54b4ba34bcbd68010a90097f266d8c323eb300ae1aacb178d6ce73c6034928e2a; desktop_session_key.sig=nwseMnmPsdsxeV26biEM9Jko3xM; no-re-reg-required=1; cycada=P47ejkDqTA31aUt3ytyjYAsZ1Ee/IUz98ZUQmJ5S7D8=; ya_sess_id=3:1756667101.5.0.1756667099635:DNFhWA:71df.1.2:1|2084842416.0.2.0:3.3:1756667099|30:11141547.784212.SzQx5JNAKS4nDY-y0d4SGHZnEYE; sessar=1.1205.CiClIxebj1t4gnleFs8gOkCcQI8DRx0oao_EBz4C-iUFxQ.MQKJX13t2LLSg81EWynviTZ58x7flekfUN_TKWNWPmo; yandex_login=italostradins; ys=c_chck.1009858607#udn.cDppdGFsb3N0cmFkaW5z; L=eC4FBXMGcG1bQn8HaHUFQmRpeG1ZSltkCy5VJFkKOR0uBy5XIA==.1756667099.16265.378888.c13e593c0eb64f57bb3db8efe3dad50b; mda2_beacon=1756667101909; _yasc=vdgkHNG0uAIY9o1nFocpnDlvax/hgQaCf50jbChVTl5LuLf7M2WM9osVM53RZQ=="
+    next if = Compare(Str(Var[url_kino_kinopoisk] = ""), Compare(Str(Var[url_kino_mail] = ""), Compare(Str(Var[url_rezka] = ""), Compare(Str(Var[url_seasonvar] = ""), Compare(Str(Var[url_dokonlin] = ""), Compare(Str(Var[url_youtube] = ""), Compare(Str(Var[url_kinogo] = "") , Compare(Str(Var[url_mayday] = ""), Compare(Str(Var[url_dok_film] = ""), Compare(Str(Var[url_myshow] = ""), Compare(Str(Var[url_kino_gtorrent] = ""), Compare(Str(Var[url_rutube] = ""), Compare(Str(Var[url_uft_lol] = ""), Compare(Str(Var[url_erokrad] = ""), Compare(Str(Var[url_porno] = ""), Compare(Str( Var[url_tizam] = ""), Compare(Str(Var[chan] = "1"), "", "true"), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), "")
+	url = "https://www.kinopoisk.ru/new-search/?text=" + Var[title]
+
+  [fd page] var[url_kinopoisk]
+    !begin = "\"SuggestResult_SearchResult\",\"global\":{\"__ref\":\""
+    !end   = "\""
+    replace words = ":"
+    replace to    = "/"
+    insert before = "https://www.kinopoisk.ru/"
+    insert after  = "/"
+
+; FINAL URL
+  [fd global] var[url_kinopoisk]
+	var = Compare(Str(Var[url_kino_kinopoisk] = ""), Var[url_kinopoisk], Var[url_kino_kinopoisk])
+
+; TXT
+  [fd web]
+    time out = 100
+    wait = 0.5
+    "Cookie" = " yashr=2618284221755166483; i=6m58WSAnlwla8WRWoGPxWQ/OLoZG1JhYK6AWwVVCvvZFfDJBGzLtyXS4hE9lxxj2um2sy5YCZTA16m7+bWryC8zS+4I=; yandexuid=7210040671755461507; spravka=dD0xNzU1NDYxNzQ4O2k9ODguOTcuMjEzLjE2MjtEPTdFRjM3OTM2RUI2RDc5REQyNTk3QTAyQTdDOTEwOEI1QzU0MTYxRkFCNzA4QzJCMDc2MUUxNDQ0OUNDM0MxNzIxNTQyNjIxMDI5OTIxRTlEOEZGQ0YwRTQ3NzM2QjNCQ0U5MDVDMjMyRjRERjBBQjRENTIyNzdBMTMxRjYxRkE3RDkyNDg4RkU2QUQzNzIxNzAyMDYyNzA5ODY4MDRGOTNDQzFDQTM7dT0xNzU1NDYxNzQ4NTMyNDc0NTg0O2g9Yzg0ZTAyNmJhYjQwYmRlYTk2MmIwMTY0ZTFlMWIwODI=; PHPSESSID=cf7267114bd156bc6f0c7e6b1256626e; crookie=7FyDBcXL03oFjMLgzVPfMIE/jo/uFHRtbD6VC2/Qo6RPPLSKns4edUJyZxscxvMkVhUxfY8XfrWQRVNqRTDiP1Vz9pM=; cmtchd=MTc1NjQxNTE4NzYyOA==; coockoos=1; sso_status=sso.passport.yandex.ru:synchronized; _csrf=nSBufX4iK-pYrxH7a9GpQoWK; desktop_session_key=4f76c5ae5799d66a27cb8b405db75459f42644f66caaa88962f2beaf5d09e4b69d9519a1901e03534cb656fcb9ab27d1063e51bbc1a7911d0a883b57f7af5a403d28c26599386856d2f1f800c2945db54b4ba34bcbd68010a90097f266d8c323eb300ae1aacb178d6ce73c6034928e2a; desktop_session_key.sig=nwseMnmPsdsxeV26biEM9Jko3xM; no-re-reg-required=1; cycada=P47ejkDqTA31aUt3ytyjYAsZ1Ee/IUz98ZUQmJ5S7D8=; ya_sess_id=3:1756667101.5.0.1756667099635:DNFhWA:71df.1.2:1|2084842416.0.2.0:3.3:1756667099|30:11141547.784212.SzQx5JNAKS4nDY-y0d4SGHZnEYE; sessar=1.1205.CiClIxebj1t4gnleFs8gOkCcQI8DRx0oao_EBz4C-iUFxQ.MQKJX13t2LLSg81EWynviTZ58x7flekfUN_TKWNWPmo; yandex_login=italostradins; ys=c_chck.1009858607#udn.cDppdGFsb3N0cmFkaW5z; L=eC4FBXMGcG1bQn8HaHUFQmRpeG1ZSltkCy5VJFkKOR0uBy5XIA==.1756667099.16265.378888.c13e593c0eb64f57bb3db8efe3dad50b; mda2_beacon=1756667101909; _yasc=vdgkHNG0uAIY9o1nFocpnDlvax/hgQaCf50jbChVTl5LuLf7M2WM9osVM53RZQ=="
+;   next if = Compare(Str(Var[url_kinopoisk] <> ""), Compare(Str(Var[url_kino_mail] = ""), Compare(Str(Var[url_rezka] = ""), Compare(Str(Var[url_seasonvar] = ""), Compare(Str(Var[url_dokonlin] = ""), Compare(Str(Var[url_youtube] = ""), Compare(Str(Var[url_kinogo] = "") , Compare(Str(Var[url_mayday] = ""), Compare(Str(Var[url_dok_film] = ""), Compare(Str(Var[url_myshow] = ""), Compare(Str(Var[url_kino_gtorrent] = ""), Compare(Str(Var[url_rutube] = ""), Compare(Str(Var[url_uft_lol] = ""), Compare(Str(Var[url_erokrad] = ""), Compare(Str(Var[url_porno] = ""), Compare(Str( Var[url_tizam] = ""), Compare(Str(Var[chan] = "1"), "", "true"), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), ""), "")
+   next if = Compare(Str(Var[url_kinopoisk] <> ""), "", Compare(Str(Var[url_kino_mail] = ""), "", Compare(Str(Var[url_rezka] = ""), "", Compare(Str(Var[url_seasonvar] = ""), "", Compare(Str(Var[url_dokonlin] = ""), "", Compare(Str(Var[url_youtube] = ""), "", Compare(Str(Var[url_kinogo] = ""), "", Compare(Str(Var[url_mayday] = ""), "", Compare(Str(Var[url_dok_film] = ""), "", Compare(Str(Var[url_myshow] = ""), "", Compare(Str(Var[url_kino_gtorrent] = ""), "", Compare(Str(Var[url_rutube] = ""), "", Compare(Str(Var[url_uft_lol] = ""), "", Compare(Str(Var[url_erokrad] = ""), "", Compare(Str(Var[url_porno] = ""), "", Compare(Str(Var[url_tizam] = ""), "", Compare(Str(Var[chan] = "1"), "", "true")))))))))))))))))))
+
+	url = Var[url_kinopoisk]
+
+
+
+
+  [black list]
+	host = "yandex.ru"
+	host = "sso.passport.yandex.ru"
+	host = "yastatic.net"
+	host = "widgets.kinopoisk.ru"
+	host = "browser-updater.yandex.net"
+    host = "mc.yandex.ru"
+	host = "www.kinopoisk.ru"
+    host = "kinopoisk-ru.clstorage.net"
+
+  [fd global]
+    start = "<img class=\"film-poster styles_root__J_gIg"
+    finish = "<div class=\"styles_filmRatingSection"
+
+  [fd page] var[fd_image]
+    !begin = "<img class=\"film-poster styles_root__J_gIg"
+    !begin = "src=\""
+    !end = "\""
+    trim spaces
+    insert before = "https:"
+
+  [fd image url] 
+    file name = Title + Series
+    url = Var[fd_image]
+    
+  [fd page] var[fd_name_eng]
+    !begin = "class=\"styles_originalTitle__nZWQK\""
+    !begin = ">"
+    !end = "<"
+    decode html
+    decode unicode
+    remove xml tags
+    trim spaces
+    insert before = "Оригинальное название ▪ \""
+    insert after = "\".  "
+    insert after = "\n"	
+
+  [fd page] var[fd_kinopoisk]
+    !begin = "data-tid=\"939058a8\">"
+    !end = "<"
+    remove xml tags
+    decode html
+    trim spaces
+    insert before = "Рейтинг ▪ Кинопоиск ["
+    insert after = "]"
+    
+  [fd page] var[fd_IMDb]
+    !begin = ">IMDb<"
+    !end = "</span>"
+    remove xml tags
+    decode html
+    remove words = ":"
+    remove spaces
+    trim spaces
+    insert before = " IMDb ["
+    insert after = "]"
+    
+  [fd page] arr[fd_direct]
+    !begin =">Режиссер<"
+    !begin = "data-tid=\"603f73a4\">"
+    !end = "</a></div></div><div"
+    remove xml tags
+    decode html
+    remove words = "</a>"
+    remove from ="<a class"
+    remove to = "data-tid=\"603f73a4\">"
+    trim spaces
+    insert before ="Режиссер ► "
+    insert after = ".\n"
+     
+  [fd page] var[fd_country]
+    !begin = ">Страна<"
+    !begin = "data-tid=\"603f73a4\">"
+    !end = "</a></div></div><div"
+    remove xml tags
+    decode html
+    remove words = "</a>"
+    remove from ="<a class"
+    remove to = "data-tid=\"603f73a4\">"
+    trim spaces
+    insert before = "Страна ▪ "
+    insert after = " ► "
+
+  [fd page] var[fd_year]
+    !begin = ">Год производства<"
+    !begin = "href="
+    !begin = ">"
+    !end = "</a></div></div><div"
+    remove after = "</a>"
+    remove xml tags
+    decode html
+    trim spaces
+    insert before = "Год ▪ "
+    insert after = " ► "
+    
+  [fd page] var[fd_genre]
+    !begin = ">Жанр<"
+    !end = "</a></div>"
+    decode escape
+    decode html
+    remove xml tags
+    remove duplicate spaces
+    trim spaces
+    replace words = ","
+    replace to = ", "
+    insert before = "Жанр ▪ "
+
+  [fd page] arr[fd_actor]
+    !begin = ">В главных ролях<"
+    !begin = "data-tid=\"2e6eb73e\">"
+    !end = "</a></li></ul>"
+    replace words = "</a>"
+    replace to = ","
+    remove from = "</li>"
+    remove to = "data-tid=\"2e6eb73e\">"
+    remove xml tags
+    decode html
+    trim spaces
+    insert before = "В Ролях ► "
+    insert after = "\n"
+    insert after = "---------------"
+    insert after = "\n"
+
+  [fd page] var[fd_duration]
+    !begin = ">Время<"
+    !begin = "HhLTP\">"
+    !end = "<"
+    remove xml tags
+    trim spaces
+
+  [fd page] arr[fd_producer]
+    !begin  = ">Продюсер<"
+    !begin = "data-tid=\"603f73a4\">"
+    !end = "</a></div></div><div"
+    remove xml tags
+    decode html
+    remove words = "</a>"
+    remove from ="<a class"
+    remove to = "data-tid=\"603f73a4\">"
+    trim spaces
+    insert before = "Продюсер ▪ "
+    insert after = ".\n"
+
+  [fd page] arr[fd_writer]
+    !begin  = ">Сценарий<"
+    !begin = "data-tid=\"603f73a4\">"
+    !end = "</a></div></div><div"
+    remove xml tags
+    decode html
+    remove words = "</a>"
+    remove from ="<a class"
+    remove to = "data-tid=\"603f73a4\">"
+    trim spaces
+    insert before = "Сценарий ▪  "
+    insert after = ".\n"
+
+  [fd page] arr[fd_operator]
+    !begin  =  ">Оператор<"
+    !begin = "data-tid=\"603f73a4\">"
+    !end = "</a></div></div><div"
+    remove xml tags
+    decode html
+    remove words = "</a>"
+    remove from ="<a class"
+    remove to = "data-tid=\"603f73a4\">"
+    trim spaces
+    insert before = "Оператор ▪ "
+    insert after = ".\n"
+    
+  [fd page] arr[fd_composer]
+    !begin  = ">Композитор<"
+    !begin = "data-tid=\"603f73a4\">"
+    !end = "</a></div></div><div"
+    remove xml tags
+    decode html
+    remove words = "</a>"
+    remove from ="<a class"
+    remove to = "data-tid=\"603f73a4\">"
+    trim spaces
+    insert before = "Композитор ▪ "
+    insert after = ".\n"
+
+  [fd page] arr[fd_art]
+    !begin  = ">Художник<"
+    !begin = "data-tid=\"603f73a4\">"
+    !end = "</a></div></div><div"
+    remove xml tags
+    decode html
+    remove words = "</a>"
+    remove from ="<a class"
+    remove to = "data-tid=\"603f73a4\">"
+    trim spaces
+    insert before = "Художники ▪ "
+    insert after = ".\n"	
+
+  [fd page] var[fd_budget]
+    !begin = ">Бюджет<"
+    !begin = "href="
+    !begin = ">"
+    !end = "<"
+    decode html
+    decode unicode
+    remove xml tags
+    trim spaces
+    insert before = "Бюджет ▪ "
+    insert after = "\n"
+    
+  [fd page] var[fd_descshort]	
+    !begin = "data-tid=\"bfd38da2\">"
+    !end = "</p>"
+    remove xml tags
+    decode html
+    trim spaces	
+    insert before = " ▪ ... "
+    insert after = "\n"		
+  [fd page] var[fd_descs]
+    !begin  = "<p class=\"styles_paragraph__V0fA2\" data-tid=\"bbb11238\">"
+    !end = "</div>"
+    remove xml tags
+    decode html
+    trim spaces
+    insert before = "► " 
+  [fd page] var[fd_desc]
+    var = Var[fd_descshort] + Var[fd_descs]
+    remove duplicate spaces
+    trim spaces
+    insert after = "\n"
+    insert after = "---------------"
+    insert after = "\n"	
+    
+  [fd page] var[fd_slogan]
+    !begin = ">Слоган<"
+    !begin = "HhLTP\">"
+    !end = "</div>"
+    decode html
+    decode unicode
+    remove xml tags
+    trim spaces
+    insert before = "Cлоган ▪ "
+    trim spaces
+    clear if = "Cлоган: —"
+    insert after = "\n"
+
+  [fd page] var[fd_vozr]
+    !begin = ">Возраст<"
+    !begin = "data-tid=\"5c1ffa33\">"
+    !end = "<"
+    decode html
+    remove xml tags
+    trim spaces
+    insert before = " ▪ ["
+    insert after = "]"
+
+  [fd page] var[fd_cap1]
+    var = Var[fd_genre] + Var[fd_vozr] 
+    insert after = "\n"
+
+  [fd page] var[fd_capr]
+    var = Var[fd_kinopoisk] + Var[fd_IMDb] 
+    insert after = "\n"	
+    
+  [fd page] var[fd_cap2]
+    var = Var[fd_country] + Var[fd_year] + Var[fd_capr] + Var[fd_duration]
+    remove duplicate spaces
+    trim spaces
+    insert after = "\n"
+    insert after = "---------------"
+    insert after = "\n"
+
+   [fd]
+     result = Var[fd_cap1] + Var[fd_cap2] + Var[fd_desc] + Var[fd_direct] + Var[fd_actor] +  Var[fd_producer] + Var[fd_writer] + Var[fd_composer] + Var[fd_operator] + Var[fd_art] + Var[fd_name_eng] + Var[fd_budget] + Var[fd_slogan]	
